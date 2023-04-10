@@ -1,35 +1,49 @@
 <%= stylesheet_link_tag 'index'%>
+<%= render partial:"home/navbar"%>
+<div id="particles-js">
+        <div class="logincard">
+        <p>Log In</p>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field">
+              <%= f.label :email  %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div><br>
 
-<h2>Log in</h2>
+            <div class="field">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "current-password" %>
+            </div><br>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+            <% if devise_mapping.rememberable? %>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %><br>
+              </div>
+            <% end %>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+            <div class="field" ,style="text-align:center">
+          <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+          </div><br>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <%= f.submit "Log in", :class=>'btn btn-primary'%>
+            </div>
+          <% end %><br>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+          
+          <div class="field">
+          <a style="font-size:20px">Dont have an account</a>
+          <%= link_to "Sign up", new_registration_path(resource_name) %>
 
-<%= render "devise/shared/links" %>
+        </div>
+        </div>
+
+        </div>
+
+</div>
 <embed src="<%= audio_path 'singara.mp3'%>" loop="true" autostart="true" width="2"
          height="0">
 <!-- particles.js container -->
-<div id="particles-js"></div>
 <%= javascript_include_tag "particles" %>
 <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
 <script type="text/javascript">
