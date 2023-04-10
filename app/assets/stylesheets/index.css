@@ -12,6 +12,19 @@ canvas {
 }
 
 /* ---- particles.js container ---- */
+.bg-body-tertiary{
+  --bs-bg-opacity:0;
+}
+
+.anish{
+background-color: #fcacac;
+}
+
+.logoT{
+  height:50px;
+  width:50px;
+  border-radius: 50%;
+}
 
 #particles-js {
   position: absolute;
