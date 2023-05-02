@@ -86,3 +86,143 @@ background-color: #fcacac;
 .field{
   font-size:200%;
 }
+
+.main{
+    
+    top: 25rem;
+    bottom:75rem;
+    background-color: yellow;
+}
+
+.blog.head{
+    height:12.5%;
+    background-color: green;
+}
+
+#sticky-navi {
+  position: fixed;
+  top: 1px;
+  background-color: aquamarine;
+  height: 10.5%;
+  font-size: medium;
+  width: 100%;
+  z-index:1;
+}
+
+.vwrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  height:1000px;
+}
+.vwrapper #row1 {
+  top:1000px;
+}
+.vwrapper #row2 {
+  background-color: palegoldenrod;
+  min-height: 10%;
+  /*position:fixed;
+  width:100%;
+  z-index:10;*/
+}
+.vwrapper #row3 {
+  background-color: green;
+  flex: 1 1 auto;
+  display: flex;
+}
+.vwrapper #row3 #col1 {
+  /*background-color: yellow;*/
+  background-image: linear-gradient(to right, pink , yellow);
+  flex: 0 1 30%;
+}
+.vwrapper #row3 #col2 {
+  background-image: linear-gradient(to right,lightblue ,lightgreen);
+  flex: 0 1 60%;
+  text-align: center;
+  overflow: hidden;
+
+}
+.vwrapper #row3 #col3 {
+  background-image: linear-gradient(to right, lightgrey,lightgoldenrodyellow);
+  flex: 0 1 10%;
+}
+
+.card-body{
+  margin:2%;
+}
+.card-body .col{
+  width:10%;
+  text-align: left;
+  font-size: small;
+  line-height: 1.1px;
+}
+.card-body .row p{
+  font-size: medium;
+}
+
+.logome{
+  height:50px;
+  width:65px;
+  border-radius: 50%;
+}
+
+#Your-Account{
+  font-size: 100px;
+}
+
+.col_1{
+  width:70px;
+  padding-right: 2px;
+  /*margin-right:-45px;*/
+}
+.col_2{
+  width:300px;
+  text-align: left;
+  font-weight: bold;
+  height: fit-content;
+}
+
+.card{
+  margin:2%;
+  border-radius: 2%;
+}
+
+.sfs img{
+  width:80%;
+  height:25%;
+  text-align: center;
+  position:relative; 
+  margin-left:10%;
+  margin-right: 10%; 
+}
+.designation{
+  font-size: xx-small;
+  color: grey;
+  opacity: 75%;
+}
+
+#chatter-name{
+  padding-left:10px;
+  padding-top:10px;
+  line-height:15px;
+}
+.name{
+  font-weight: bold;
+  font-size: medium;
+}
+
+.recent{
+  color: grey;
+}
+.box{
+  background-color:lightgreen ;
+/*height:650px;*/
+width:75px;
+position:fixed;
+float:left;
+top:50%;
+text-align: center;
+}
