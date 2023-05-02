@@ -2,11 +2,11 @@
 <%= stylesheet_link_tag 'index'%>
 <%= render 'partials/navbar' %>
  <div class="vwrapper">
-        <div id="row1"> 
+        <div id="row1">
         </div>
 
         <div id="row2">
-            
+
         </div>
 
         <div id="row3">
@@ -20,9 +20,9 @@
                        <div class="col">
                             <p>Anuraag Bandaru venkata</p>
                             <p>This is a recent chat</p>
-                       </div>                       
+                       </div>
                     </div>-->
-                     
+
                 <div class="container" id="chatter-name">
                     <div class="row">
                         <div class="col-2">
@@ -34,173 +34,80 @@
     </div>
   </div>
 </div>
-       <hr>             
+       <hr>
             </div>
             <div id="col2">
 <br>
-                    <div class="card" id="blog-card">
-                        <div class="card-body">
-                                <div class="row">
-                                    <div class="col_1">
-                                        <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
-                                    </div>
 
-                                    <div class="col_2",style="width:10%">
-                                        <p>First Name  Last Name</p>
-                                        <p class="designation">Designation</p>
-                                    </div>
 
-                                    <hr>
 
-                                    <div class="col">
-                                    </div>
-                                </div>
+<% Blog.all.each do |blog|%>
+<div class="card" id="blog-card">
+        <div class="card-body">
+                <div class="row">
+                    <div class="col_1">
+                        <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
+                    </div>
 
-                                <div class="row">
-                                        <p>This just an example for a blog.A paragraph is a self-contained unit of discourse in writing dealing with a particular point or idea. Though not required by the orthographic conventions of any language with a writing system, paragraphs are a conventional means of organizing extended segments of prose.  </p>                
-                                </div>
+                    <div class="col_2",style="width:10%">
+                        <p><%= blog.name%></p>
+                        <p class="designation"><%= blog.designation%></p>
+                    </div>
 
-                        <br>
+                    <hr>
 
-                                <div class="sfs">
-                                    <!--<img class="card-img-top" id="blog-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Card image cap">-->
-                                    
-                                </div>
-
-                        <hr>
-
-                                <div class="row">
-                                    <div class="col">
-                                        <h3><a href="#"><i class="bi bi-hand-thumbs-up"></i></a>Like</h3>
-                                    </div>
-
-                                    <div class="col">
-                                        <h3><a href="# "><i class="bi bi-hand-thumbs-down" id="thumps-down"></i></a>Dislike</h3>
-                                    </div>
-
-                                    <div class="col">
-                                        <h3><a href="#"><i class="bi bi-chat-right-text"></i></a>Comment</h3>
-                                    </div>
-
-                                    <div class="col">
-                                        <h3><a href="#" ><i class="bi bi-share" ></i></a>Share</h3>
-                                    </div>
-                                </div>
-
+                    <div class="col">
                     </div>
                 </div>
-<br>
-                <div class="card" id="blog-card">
-                        <div class="card-body">
-                                <div class="row">
-                                    <div class="col_1">
-                                        <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
-                                    </div>
 
-                                    <div class="col_2",style="width:10%">
-                                        <p>First Name  Last Name</p>
-                                        <p class="designation">Designation</p>
-                                    </div>
+                <div class="row">
+                        <p><%= blog.content%> </p>
+                </div>
 
-                                    <hr>
+        <br>
 
-                                    <div class="col">
-                                    </div>
-                                </div>
+                <div class="sfs">
+                  <ul>
+                    <% blog.pictures.each do |file| %>
+                      <li>
 
-                                <div class="row">
-                                        <p>This just an example for a blog.A paragraph is a self-contained unit of discourse in writing dealing with a particular point or idea. Though not required by the orthographic conventions of any language with a writing system, paragraphs are a conventional means of organizing extended segments of prose.  </p>                
-                                </div>
+                          <%= image_tag file %>
+                      </li>
+                    <% end %>
+                  </ul>  <br>
+                </div>
 
-                        <br>
+        <hr>
 
-                                <div class="sfs">
-                                    <img class="card-img-top" id="blog-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Card image cap">
-                                    <br>
-                                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3><a href="#"><i class="bi bi-hand-thumbs-up"></i></a><%= blog.likes%></h3>
+                    </div>
 
-                        <hr>
+                    <div class="col">
+                        <h3><a href="# "><i class="bi bi-hand-thumbs-down" id="thumps-down"></i></a><%= blog.dislikes%></h3>
+                    </div>
 
-                                <div class="row">
-                                    <div class="col">
-                                        <h3><a href="#"><i class="bi bi-hand-thumbs-up"></i></a>Like</h3>
-                                    </div>
+                    <div class="col">
+                        <h3><a href="#"><i class="bi bi-chat-right-text"></i></a>Comment</h3>
+                    </div>
 
-                                    <div class="col">
-                                        <h3><a href="# "><i class="bi bi-hand-thumbs-down" id="thumps-down"></i></a>Dislike</h3>
-                                    </div>
-
-                                    <div class="col">
-                                        <h3><a href="#"><i class="bi bi-chat-right-text"></i></a>Comment</h3>
-                                    </div>
-
-                                    <div class="col">
-                                        <h3><a href="#" ><i class="bi bi-share" ></i></a>Share</h3>
-                                    </div>
-                                </div>
-
+                    <div class="col">
+                        <h3><a href="#" ><i class="bi bi-bookmark-check" ></i></a>Bookmark</h3>
                     </div>
                 </div>
-<br>
-                <div class="card" id="blog-card">
-                        <div class="card-body">
-                                <div class="row">
-                                    <div class="col_1">
-                                        <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
-                                    </div>
 
-                                    <div class="col_2",style="width:10%">
-                                        <p>First Name  Last Name</p>
-                                        <p class="designation">Designation</p>
-                                    </div>
-
-                                    <hr>
-
-                                    <div class="col">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                        <p>This just an example for a blog.A paragraph is a self-contained unit of discourse in writing dealing with a particular point or idea. Though not required by the orthographic conventions of any language with a writing system, paragraphs are a conventional means of organizing extended segments of prose.  </p>                
-                                </div>
-
-                        <br>
-
-                                <div class="sfs">
-                                    <img class="card-img-top" id="blog-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Card image cap">
-                                    <br>
-                                </div>
-
-                        <hr>
-
-                                <div class="row">
-                                    <div class="col">
-                                        <h3><a href="#"><i class="bi bi-hand-thumbs-up"></i></a>Like</h3>
-                                    </div>
-
-                                    <div class="col">
-                                        <h3><a href="# "><i class="bi bi-hand-thumbs-down" id="thumps-down"></i></a>Dislike</h3>
-                                    </div>
-
-                                    <div class="col">
-                                        <h3><a href="#"><i class="bi bi-chat-right-text"></i></a>Comment</h3>
-                                    </div>
-
-                                    <div class="col">
-                                        <h3><a href="#" ><i class="bi bi-share" ></i></a>Share</h3>
-                                    </div>
-                                </div>
-
-                    </div>
-                </div>
+    </div>
+</div>
+<% end%>
             </div>
                 <div id="col3">
                 <div class="box">
-                <i class="bi bi-plus-square-fill"style="font-size:50px;"></i>
-                <i class="bi bi-plus-square-fill"style="font-size:50px;"></i>
-                <i class="bi bi-plus-square-fill"style="font-size:50px;"></i>
-                <i class="bi bi-plus-square-fill"style="font-size:50px;"></i>
+                <%= link_to '<i class="bi bi-plus-square-fill"style="font-size:50px;"></i>'.html_safe ,new_blog_path%>
+                <%= link_to '<i class="bi bi-info-square-fill"style="font-size:50px;"></i>'.html_safe ,blogs_path(id:current_user.id)%>
+                <%= link_to '<i class="bi bi-bookmark-check-fill"style="font-size:50px;"></i>'.html_safe ,new_blog_path%>
+                <%= link_to '<i class="bi bi-plus-square-fill"style="font-size:50px;"></i>'.html_safe ,new_blog_path%>
                 </div>
         </div>
-            
+
 </div>
