@@ -81,11 +81,21 @@
 
                 <div class="row">
                     <div class="col">
-                        <h3><a href="#"><i class="bi bi-hand-thumbs-up"></i></a><%= blog.likes%></h3>
+                      <%= form_with(model: blog) do |form| %>
+                      <% @blogs=blog.likes+1%>
+                      <%= form.hidden_field :likes, value: @blogs %>
+                        <h3><a href="#"><%= button_tag( :class => "button_green") do %><i class="bi bi-hand-thumbs-up"></i>
+<% end %></a><%= blog.likes%></h3>
+                     <%end%>
                     </div>
 
                     <div class="col">
-                        <h3><a href="# "><i class="bi bi-hand-thumbs-down" id="thumps-down"></i></a><%= blog.dislikes%></h3>
+                      <%= form_with(model: blog) do |form| %>
+                      <% @blogs1=blog.dislikes+1%>
+                      <%= form.hidden_field :dislikes, value: @blogs1 %>
+                        <h3><a href="#"><%= button_tag( :class => "button_green") do %><i class="bi bi-hand-thumbs-down"></i>
+<% end %></a><%= blog.dislikes%></h3>
+                     <%end%>
                     </div>
 
                     <div class="col">
