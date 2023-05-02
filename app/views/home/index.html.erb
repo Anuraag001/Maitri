@@ -1,145 +1,206 @@
+
 <%= stylesheet_link_tag 'index'%>
-<div id="particles-js" style="z-index:0;"></div>
-<%= render 'navbar' %>
-<div style="z-index:2;">
-  <%= render 'footer' %>
+<%= render 'partials/navbar' %>
+ <div class="vwrapper">
+        <div id="row1"> 
+        </div>
+
+        <div id="row2">
+            
+        </div>
+
+        <div id="row3">
+            <div id="col1">
+            <br>
+                    <!--<div class="row_1">
+                        <div class="col">
+                            <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
+                       </div>
+
+                       <div class="col">
+                            <p>Anuraag Bandaru venkata</p>
+                            <p>This is a recent chat</p>
+                       </div>                       
+                    </div>-->
+                     
+                <div class="container" id="chatter-name">
+                    <div class="row">
+                        <div class="col-2">
+                            <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
+                        </div>
+    <div class="col">
+      <p class="name">Anuraag Bandaru venkata</p>
+      <p class="recent">This is a recent chat</p>
+    </div>
+  </div>
 </div>
+       <hr>             
+            </div>
+            <div id="col2">
+<br>
+                    <div class="card" id="blog-card">
+                        <div class="card-body">
+                                <div class="row">
+                                    <div class="col_1">
+                                        <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
+                                    </div>
 
-<%= javascript_include_tag "particles" %>
-<embed src="<%= audio_path 'singara.mp3'%>" loop="true" autostart="true" width="2"
-         height="0">
-<script type="text/javascript">
+                                    <div class="col_2",style="width:10%">
+                                        <p>First Name  Last Name</p>
+                                        <p class="designation">Designation</p>
+                                    </div>
 
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 10,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#ffffff"
-        },
-        "shape": {
-          "type": "image",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-          "polygon": {
-            "nb_sides": 5
-          },
-          "image": {
-            "src": '<%= asset_path 'heart.png' %>',
-            "width": 100,
-            "height": 100
-          }
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 90,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 20,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": false,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.0,
-          "width": 0
-        },
-        "move": {
-          "enable": true,
-          "speed": 6,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "grab"
-          },
-          "onclick": {
-            "enable": true,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 140,
-            "line_linked": {
-              "opacity": 1
-            }
-          },
-          "bubble": {
-            "distance": 400,
-            "size": 40,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
-        }
-      },
-      "retina_detect": true
-    });
+                                    <hr>
 
+                                    <div class="col">
+                                    </div>
+                                </div>
 
-    /* ---- stats.js config ---- */
+                                <div class="row">
+                                        <p>This just an example for a blog.A paragraph is a self-contained unit of discourse in writing dealing with a particular point or idea. Though not required by the orthographic conventions of any language with a writing system, paragraphs are a conventional means of organizing extended segments of prose.  </p>                
+                                </div>
 
-    var count_particles, stats, update;
-    stats = new Stats;
-    stats.setMode(0);
-    stats.domElement.style.position = 'absolute';
-    stats.domElement.style.left = '0px';
-    stats.domElement.style.top = '0px';
-    document.body.appendChild(stats.domElement);
-    count_particles = document.querySelector('.js-count-particles');
-    update = function() {
-      stats.begin();
-      stats.end();
-      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-      }
-      requestAnimationFrame(update);
-    };
-    requestAnimationFrame(update);
+                        <br>
 
-</script>
+                                <div class="sfs">
+                                    <!--<img class="card-img-top" id="blog-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Card image cap">-->
+                                    
+                                </div>
+
+                        <hr>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <h3><a href="#"><i class="bi bi-hand-thumbs-up"></i></a>Like</h3>
+                                    </div>
+
+                                    <div class="col">
+                                        <h3><a href="# "><i class="bi bi-hand-thumbs-down" id="thumps-down"></i></a>Dislike</h3>
+                                    </div>
+
+                                    <div class="col">
+                                        <h3><a href="#"><i class="bi bi-chat-right-text"></i></a>Comment</h3>
+                                    </div>
+
+                                    <div class="col">
+                                        <h3><a href="#" ><i class="bi bi-share" ></i></a>Share</h3>
+                                    </div>
+                                </div>
+
+                    </div>
+                </div>
+<br>
+                <div class="card" id="blog-card">
+                        <div class="card-body">
+                                <div class="row">
+                                    <div class="col_1">
+                                        <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
+                                    </div>
+
+                                    <div class="col_2",style="width:10%">
+                                        <p>First Name  Last Name</p>
+                                        <p class="designation">Designation</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="col">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                        <p>This just an example for a blog.A paragraph is a self-contained unit of discourse in writing dealing with a particular point or idea. Though not required by the orthographic conventions of any language with a writing system, paragraphs are a conventional means of organizing extended segments of prose.  </p>                
+                                </div>
+
+                        <br>
+
+                                <div class="sfs">
+                                    <img class="card-img-top" id="blog-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Card image cap">
+                                    <br>
+                                </div>
+
+                        <hr>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <h3><a href="#"><i class="bi bi-hand-thumbs-up"></i></a>Like</h3>
+                                    </div>
+
+                                    <div class="col">
+                                        <h3><a href="# "><i class="bi bi-hand-thumbs-down" id="thumps-down"></i></a>Dislike</h3>
+                                    </div>
+
+                                    <div class="col">
+                                        <h3><a href="#"><i class="bi bi-chat-right-text"></i></a>Comment</h3>
+                                    </div>
+
+                                    <div class="col">
+                                        <h3><a href="#" ><i class="bi bi-share" ></i></a>Share</h3>
+                                    </div>
+                                </div>
+
+                    </div>
+                </div>
+<br>
+                <div class="card" id="blog-card">
+                        <div class="card-body">
+                                <div class="row">
+                                    <div class="col_1">
+                                        <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
+                                    </div>
+
+                                    <div class="col_2",style="width:10%">
+                                        <p>First Name  Last Name</p>
+                                        <p class="designation">Designation</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="col">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                        <p>This just an example for a blog.A paragraph is a self-contained unit of discourse in writing dealing with a particular point or idea. Though not required by the orthographic conventions of any language with a writing system, paragraphs are a conventional means of organizing extended segments of prose.  </p>                
+                                </div>
+
+                        <br>
+
+                                <div class="sfs">
+                                    <img class="card-img-top" id="blog-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Card image cap">
+                                    <br>
+                                </div>
+
+                        <hr>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <h3><a href="#"><i class="bi bi-hand-thumbs-up"></i></a>Like</h3>
+                                    </div>
+
+                                    <div class="col">
+                                        <h3><a href="# "><i class="bi bi-hand-thumbs-down" id="thumps-down"></i></a>Dislike</h3>
+                                    </div>
+
+                                    <div class="col">
+                                        <h3><a href="#"><i class="bi bi-chat-right-text"></i></a>Comment</h3>
+                                    </div>
+
+                                    <div class="col">
+                                        <h3><a href="#" ><i class="bi bi-share" ></i></a>Share</h3>
+                                    </div>
+                                </div>
+
+                    </div>
+                </div>
+            </div>
+                <div id="col3">
+                <div class="box">
+                <i class="bi bi-plus-square-fill"style="font-size:50px;"></i>
+                <i class="bi bi-plus-square-fill"style="font-size:50px;"></i>
+                <i class="bi bi-plus-square-fill"style="font-size:50px;"></i>
+                <i class="bi bi-plus-square-fill"style="font-size:50px;"></i>
+                </div>
+        </div>
+            
+</div>

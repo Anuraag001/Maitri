@@ -5,3 +5,6 @@
 //= link index.css
 //= link particles.js
 //= link app.js
+//= require jquery3
+//= require popper
+//= require bootstrap
