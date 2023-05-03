@@ -88,7 +88,7 @@ background-color: #fcacac;
 }
 
 .main{
-    
+
     top: 25rem;
     bottom:75rem;
     background-color: yellow;
@@ -104,7 +104,7 @@ background-color: #fcacac;
 }
 
 #sticky-navi {
-  
+
   /*position: fixed;
   top: 0px;
   background-color:black;
@@ -149,7 +149,7 @@ background-color: #fcacac;
 .vwrapper #row3 #col1 {
   /*background-color: yellow;*/
   background-image: linear-gradient(to right, pink , yellow);
-  
+
   flex: 0 1 30%;
 }
 .vwrapper #row3 #col2 {
@@ -164,10 +164,16 @@ background-color: #fcacac;
   flex: 0 1 10%;
 }
 .vwrapper #row4{
-  
+
   flex: 1 1 auto;
   display: flex;
 }
+
+#col2{
+  overflow-y: scroll;
+  height: 100vh
+}
+
 .card-body{
   margin:2%;
 }
@@ -221,9 +227,9 @@ background-color: #fcacac;
   width:80%;
   height:25%;
   text-align: center;
-  position:relative; 
+  position:relative;
   margin-left:10%;
-  margin-right: 10%; 
+  margin-right: 10%;
 }
 .designation{
   font-size: xx-small;
@@ -273,6 +279,10 @@ padding-bottom: 10%;*/
  flex-direction: column;
 }
 
+#start{
+  width: 20%;
+  height: 5%;
+}
 
 
 
@@ -298,7 +308,7 @@ padding-bottom: 10%;*/
   height:80%;
   flex-direction: column;
   position: absolute;
-  
+
   left:25%;
   top:10%;
   text-align: center;
