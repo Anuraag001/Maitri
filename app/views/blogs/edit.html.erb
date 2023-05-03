@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag 'index'%>
+<div class="show-blog">
 <h1>Editing blog</h1>
 
 <%= render "form", blog: @blog %>
@@ -5,6 +7,10 @@
 <br>
 
 <div>
-  <%= link_to "Show this blog", @blog %> |
-  <%= link_to "Back to blogs", blogs_path %>
+
+
+  <%= link_to "Show this blog", @blog,class:"btn btn-warning",style:"font-size:large" %> 
+   <b>or<b>
+   <%= link_to "Back to blogs", blogs_path,class:"btn btn-warning",style:"font-size:large" %>
+</div>
 </div>

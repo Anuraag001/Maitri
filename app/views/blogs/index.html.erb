@@ -8,10 +8,10 @@
   <% @myblog.each do |blog| %>
     <%= render blog %>
     <p>
-      <button type="button" class="btn btn-light"><%= link_to "Show this blog", blog %></button>
+      <%= link_to "Show this blog", blog,class:"btn btn-light" %>
     </p>
     <br><br>
   <% end %>
 </div>
-<button type="button" class="btn btn-light"><%= link_to "New blog", new_blog_path %></button>
+<%= link_to "New blog", new_blog_path ,class:"btn btn-light"%>
 </div>
