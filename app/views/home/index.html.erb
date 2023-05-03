@@ -1,131 +1,193 @@
-
 <%= stylesheet_link_tag 'index'%>
+<%= stylesheet_link_tag 'chat'%>
+
 <%= render 'partials/navbar' %>
- <div class="vwrapper">
-        <div id="row1">
-        </div>
+<div class="vwrapper">
+  <div id="row1"></div>
 
-        <div id="row2">
+  <div id="row2"></div>
 
-        </div>
+  <div id="row3">
+    <div id="col1">
+      <br>
+      <!--<div class="row_1"> <div class="col"> <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a> </div> <div class="col"> <p>Anuraag Bandaru venkata</p> <p>This is a recent chat</p> </div> </div>-->
 
-        <div id="row3">
-            <div id="col1">
-            <br>
-                    <!--<div class="row_1">
-                        <div class="col">
-                            <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
-                       </div>
+        <div class="chatting">
+          <div class="container" id="chatter-name">
+            <div class="row">
+              <div class="col-2">
+                <a href="#">
+                  <i class="bi bi-person-circle" style="font-size:50px;"></i>
+                </a>
+              </div>
+              <div class="col">
+                <p class="name">Anuraag Bandaru venkata</p>
+                <p class="recent">This is a recent chat</p>
+              </div>
 
-                       <div class="col">
-                            <p>Anuraag Bandaru venkata</p>
-                            <p>This is a recent chat</p>
-                       </div>
-                    </div>-->
 
-      <div class="chatting">
-        <div class="container" id="chatter-name">
-          <div class="row">
-            <div class="col-2">
-              <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
+                <button id="start" class="btn btn-primary", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
+              <div id="chat1">
+                <%= render 'home/chat' %>
+              </div>
+
             </div>
-            <div class="col">
-              <p class="name">Anuraag Bandaru venkata</p>
-              <p class="recent">This is a recent chat</p>
+          </div>
+          <div class="container" id="chatter-name">
+            <div class="row">
+              <div class="col-2">
+                <a href="#">
+                  <i class="bi bi-person-circle" style="font-size:50px;"></i>
+                </a>
+              </div>
+              <div class="col">
+                <p class="name">Anuraag Bandaru venkata</p>
+                <p class="recent">This is a recent chat</p>
+              </div>
+
+
+                <button id="start" class="btn btn-primary", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
+              <div id="chat1">
+                <%= render 'home/chat' %>
+              </div>
+
+            </div>
+          </div>
+          <div class="container" id="chatter-name">
+            <div class="row">
+              <div class="col-2">
+                <a href="#">
+                  <i class="bi bi-person-circle" style="font-size:50px;"></i>
+                </a>
+              </div>
+              <div class="col">
+                <p class="name">Anuraag Bandaru venkata</p>
+                <p class="recent">This is a recent chat</p>
+              </div>
+
+
+                <button id="start" class="btn btn-primary", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
+              <div id="chat1">
+                <%= render 'home/chat' %>
+              </div>
+
             </div>
           </div>
         </div>
-      </div>
-  
-       <hr>
+
+    </div>
+    <div id="col2">
+      <br>
+
+      <% Blog.all.each do |blog|%>
+        <div class="card" id="blog-card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col_1">
+                <a href="#">
+                  <i class="bi bi-person-circle" style="font-size:50px;"></i>
+                </a>
+              </div>
+
+              <div class="col_2" ,style="width:10%">
+                <p><%= blog.name%></p>
+                <p class="designation"><%= blog.designation%></p>
+              </div>
+
+              <hr>
+
+              <div class="col"></div>
             </div>
-            <div id="col2">
-<br>
 
+            <div class="row">
+              <p><%= blog.content%>
+              </p>
+            </div>
 
+            <br>
 
-<% Blog.all.each do |blog|%>
-<div class="card" id="blog-card">
-        <div class="card-body">
-                <div class="row">
-                    <div class="col_1">
-                        <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
-                    </div>
+            <div class="sfs">
+              <ul>
+                <% blog.pictures.each do |file| %>
+                  <li>
 
-                    <div class="col_2",style="width:10%">
-                        <p><%= blog.name%></p>
-                        <p class="designation"><%= blog.designation%></p>
-                    </div>
+                    <%= image_tag file %>
+                  </li>
+                <% end %>
+              </ul>
+              <br>
+            </div>
 
-                    <hr>
+            <hr>
 
-                    <div class="col">
-                    </div>
-                </div>
-
-                <div class="row">
-                        <p><%= blog.content%> </p>
-                </div>
-
-        <br>
-
-                <div class="sfs">
-                  <ul>
-                    <% blog.pictures.each do |file| %>
-                      <li>
-
-                          <%= image_tag file %>
-                      </li>
+            <div class="row">
+              <div class="col">
+                <%= form_with(model: blog) do |form| %>
+                <% @blogs=blog.likes+1%>
+                  <%= form.hidden_field :likes, value: @blogs %>
+                  <h3 id="blog-last">
+                    <a href="#"><%= button_tag( :class => "button_green") do %>
+                      <i class="bi bi-hand-thumbs-up"></i>
                     <% end %>
-                  </ul>  <br>
-                </div>
-
-        <hr>
-
-                <div class="row">
-                    <div class="col">
-                      <%= form_with(model: blog) do |form| %>
-                      <% @blogs=blog.likes+1%>
-                      <%= form.hidden_field :likes, value: @blogs %>
-                        <h3 id="blog-last"><a href="#"><%= button_tag( :class => "button_green") do %><i class="bi bi-hand-thumbs-up"></i>
-<% end %></a><%= blog.likes%></h3>
-                     <%end%>
-                    </div>
-
-                    <div class="col">
-                      <%= form_with(model: blog) do |form| %>
-                      <% @blogs1=blog.dislikes+1%>
-                      <%= form.hidden_field :dislikes, value: @blogs1 %>
-                        <h3 id="blog-last"><a href="#"><%= button_tag( :class => "button_green") do %><i class="bi bi-hand-thumbs-down"></i>
-<% end %></a><%= blog.dislikes%></h3>
-                     <%end%>
-                    </div>
-
-                    <div class="col">
-                        <h3 id="blog-last"><a href="#"><i class="bi bi-chat-right-text"></i></a>Comment</h3>
-                    </div>
-
-                    <div class="col">
-                        <h3 id="blog-last"><a href="#" ><i class="bi bi-bookmark-check" ></i></a>Bookmark</h3>
-                    </div>
-                </div>
-
-    </div> 
-</div>
-<% end%>
+                  </a><%= blog.likes%></h3>
+              <%end%>
             </div>
-                <div id="col3">
-                <div class="box">
-                <%= link_to '<i class="bi bi-plus-square-fill"style="font-size:50px;"></i>'.html_safe ,new_blog_path%>
-                <%= link_to '<i class="bi bi-info-square-fill"style="font-size:50px;"></i>'.html_safe ,blogs_path(id:current_user.id)%>
-                <%= link_to '<i class="bi bi-bookmark-check-fill"style="font-size:50px;"></i>'.html_safe ,new_blog_path%>
-                <%= link_to '<i class="bi bi-plus-square-fill"style="font-size:50px;"></i>'.html_safe ,new_blog_path%>
-                </div>
-               
+
+            <div class="col">
+              <%= form_with(model: blog) do |form| %>
+              <% @blogs1=blog.dislikes+1%>
+                <%= form.hidden_field :dislikes, value: @blogs1 %>
+                <h3 id="blog-last">
+                  <a href="#"><%= button_tag( :class => "button_green") do %>
+                    <i class="bi bi-hand-thumbs-down"></i>
+                  <% end %>
+                </a><%= blog.dislikes%></h3>
+            <%end%>
+          </div>
+
+          <div class="col">
+            <h3 id="blog-last">
+              <a href="#">
+                <i class="bi bi-chat-right-text"></i>
+              </a>Comment</h3>
+          </div>
+
+          <div class="col">
+            <h3 id="blog-last">
+              <a href="#">
+                <i class="bi bi-bookmark-check"></i>
+              </a>Bookmark</h3>
+          </div>
         </div>
-       
+
+      </div>
+    </div>
+  <% end%>
+</div>
+<div id="col3">
+  <div class="box">
+    <%= link_to '<i class="bi bi-plus-square-fill"style="font-size:50px;"></i>'.html_safe ,new_blog_path%>
+    <%= link_to '<i class="bi bi-info-square-fill"style="font-size:50px;"></i>'.html_safe ,blogs_path(id:current_user.id)%>
+    <%= link_to '<i class="bi bi-bookmark-check-fill"style="font-size:50px;"></i>'.html_safe ,new_blog_path%>
+    <%= link_to '<i class="bi bi-plus-square-fill"style="font-size:50px;"></i>'.html_safe ,new_blog_path%>
+  </div>
+
+</div>
+
 </div>
 <div class="row4">
 <%= render 'partials/footer' %>
 </div>
 </div>
+
+
+<script>
+		function toggleSection() {
+			var section = document.getElementById("chat1");
+			if (section.style.display === "none") {
+				section.style.display = "block"; /* Show the section */
+			} else {
+				section.style.display = "none"; /* Hide the section */
+			}
+		}
+	</script>

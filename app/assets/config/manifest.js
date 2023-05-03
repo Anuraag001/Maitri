@@ -3,6 +3,7 @@
 //= link application.js
 //= link application.css
 //= link index.css
+//=link chat.css
 //= link particles.js
 //= link app.js
 //= require jquery3
