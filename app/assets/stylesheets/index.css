@@ -31,10 +31,11 @@ background-color: #fcacac;
   width: 100%;
   height: 100%;
   background-color: #FFC2C2;
-  background-image: url("");
+  background-image: url("https://img.freepik.com/premium-vector/cell-phone-sms-email-communications-seamless-pattern_738121-441.jpg?w=826");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+
 }
 
 /* ---- stats.js ---- */
@@ -68,13 +69,16 @@ background-color: #fcacac;
   display:flex;
   z-index:2;
   width:fit-content;
-  left:20%;
-  top:35%;
+  left:35%;
+  top:30%;
   flex-direction: column;
   position:absolute;
   background-color: white;
   padding:3em;
   border-radius: 10px;
+  border:orange;
+  border-width: 20px 20px 20px 20px;
+  border-style: solid;
 
 }
 
@@ -132,10 +136,11 @@ background-color: #fcacac;
 }
 .vwrapper #row1 {
   top:1000px;
+  
 }
 .vwrapper #row2 {
   background-color: palegoldenrod;
-  min-height: 4%;
+  min-height:4%;
   /*position:fixed;
   width:100%;
   z-index:10;*/
@@ -144,6 +149,8 @@ background-color: #fcacac;
   background-color: green;
   flex: 1 1 auto;
   display: flex;
+  
+  
 }
 
 .vwrapper #row3 #col1 {
@@ -162,11 +169,13 @@ background-color: #fcacac;
 .vwrapper #row3 #col3 {
   background-image: linear-gradient(to right, lightgrey,lightgoldenrodyellow);
   flex: 0 1 10%;
+  
 }
 .vwrapper #row4{
 
   flex: 1 1 auto;
   display: flex;
+  
 }
 
 #col2{
@@ -259,19 +268,43 @@ background-color: #fcacac;
 }
 .box{
   background-color:lightgreen ;
-height:25%;
+height:60%;
 width:75px;
 position:fixed;
 float:left;
-top:25%;
+top:27.5%;
 text-align: center;
 display: flex;
 flex-direction: column;
 -ms-flex-align: center;
+justify-content: center;
 /*padding-top: 10%;
 padding-bottom: 10%;*/
+border-top-right-radius: 500%;
+border-bottom-right-radius: 500%;
 
 }
+.box .c i{
+  color:lightgoldenrodyellow;
+}
+.c{
+  flex-direction: column;
+}
+#ic-1{
+  display: none;
+}
+
+#ic-2{
+  display: none;
+}
+#ic-3{
+  display: none;
+}
+
+#ic-4{
+  display: none;
+}
+
 
 .foot{
   min-height: 100vh ;
@@ -342,4 +375,82 @@ padding-bottom: 10%;*/
   font-size: xx-large;
   line-height: 150%;
 
+}
+
+
+footer{
+  background-color: #010d03;
+  height: 150px;
+  width: 100%;
+  font-family: "Open Sans";
+  padding-top: 0px;
+  color: #fff;
+}
+
+.footer-content{
+  display: flex;
+ /* align-items: center;*/
+  justify-content: left;
+  flex-direction: row;
+  text-align: left;
+  
+}
+
+.column1{
+  width:45%;
+  background-color: rgb(27, 29, 4);
+  min-height: 100%;
+}
+.column2{
+  width:25%;
+  background-color: #e32323;
+  text-align: center;
+}
+.column3{
+  width:30%;
+  background-color: #0f0ab1;
+  text-align: center;
+  padding-bottom: 2px;
+ }
+.column4{
+  width:20%;
+}
+.column5{
+  width:80%;
+  flex-direction: row;
+
+}
+.row1{
+height:60%;
+display: flex;
+}
+.row2{
+height: 40%;
+padding-top: 15px;
+flex-direction: row;
+display: flex;
+text-align: center;
+font-size: medium;
+}
+.row3{
+height:50%;
+}
+
+.row4{
+height: 50%;
+
+}
+
+
+.column6{
+  width:25%;
+}
+.column7{
+  width:25%;
+}
+.column8{
+  width:25%;
+}
+.column9{
+  width:25%;
 }
