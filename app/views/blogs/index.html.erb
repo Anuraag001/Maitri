@@ -1,14 +1,17 @@
+<%= stylesheet_link_tag 'index'%>
+<div class="my-blogs">
 <p style="color: green"><%= notice %></p>
 
-<h1>My Blogs</h1>
+<h1 style="text-align:center">My Blogs</h1>
 
 <div id="blogs">
   <% @myblog.each do |blog| %>
     <%= render blog %>
     <p>
-      <%= link_to "Show this blog", blog %>
+      <%= link_to "Show this blog", blog,class:"btn btn-light" %>
     </p>
+    <br><br>
   <% end %>
 </div>
-
-<%= link_to "New blog", new_blog_path %>
+<%= link_to "New blog", new_blog_path ,class:"btn btn-light"%>
+</div>

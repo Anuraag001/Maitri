@@ -23,17 +23,20 @@
                        </div>
                     </div>-->
 
-                <div class="container" id="chatter-name">
-                    <div class="row">
-                        <div class="col-2">
-                            <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
-                        </div>
-    <div class="col">
-      <p class="name">Anuraag Bandaru venkata</p>
-      <p class="recent">This is a recent chat</p>
-    </div>
-  </div>
-</div>
+      <div class="chatting">
+        <div class="container" id="chatter-name">
+          <div class="row">
+            <div class="col-2">
+              <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a>
+            </div>
+            <div class="col">
+              <p class="name">Anuraag Bandaru venkata</p>
+              <p class="recent">This is a recent chat</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
        <hr>
             </div>
             <div id="col2">
@@ -72,7 +75,6 @@
                       <li>
 
                           <%= image_tag file %>
-
                       </li>
                     <% end %>
                   </ul>  <br>
@@ -85,7 +87,7 @@
                       <%= form_with(model: blog) do |form| %>
                       <% @blogs=blog.likes+1%>
                       <%= form.hidden_field :likes, value: @blogs %>
-                        <h3><a href="#"><%= button_tag( :class => "button_green") do %><i class="bi bi-hand-thumbs-up"></i>
+                        <h3 id="blog-last"><a href="#"><%= button_tag( :class => "button_green") do %><i class="bi bi-hand-thumbs-up"></i>
 <% end %></a><%= blog.likes%></h3>
                      <%end%>
                     </div>
@@ -94,24 +96,23 @@
                       <%= form_with(model: blog) do |form| %>
                       <% @blogs1=blog.dislikes+1%>
                       <%= form.hidden_field :dislikes, value: @blogs1 %>
-                        <h3><a href="#"><%= button_tag( :class => "button_green") do %><i class="bi bi-hand-thumbs-down"></i>
+                        <h3 id="blog-last"><a href="#"><%= button_tag( :class => "button_green") do %><i class="bi bi-hand-thumbs-down"></i>
 <% end %></a><%= blog.dislikes%></h3>
                      <%end%>
                     </div>
 
                     <div class="col">
-                        <h3><a href="#"><i class="bi bi-chat-right-text"></i></a>Comment</h3>
+                        <h3 id="blog-last"><a href="#"><i class="bi bi-chat-right-text"></i></a>Comment</h3>
                     </div>
 
                     <div class="col">
-                        <h3><a href="#" ><i class="bi bi-bookmark-check" ></i></a>Bookmark</h3>
+                        <h3 id="blog-last"><a href="#" ><i class="bi bi-bookmark-check" ></i></a>Bookmark</h3>
                     </div>
                 </div>
 
-    </div>
+    </div> 
 </div>
 <% end%>
-
             </div>
                 <div id="col3">
                 <div class="box">
@@ -120,6 +121,11 @@
                 <%= link_to '<i class="bi bi-bookmark-check-fill"style="font-size:50px;"></i>'.html_safe ,new_blog_path%>
                 <%= link_to '<i class="bi bi-plus-square-fill"style="font-size:50px;"></i>'.html_safe ,new_blog_path%>
                 </div>
+               
         </div>
-
+       
+</div>
+<div class="row4">
+<%= render 'partials/footer' %>
+</div>
 </div>
