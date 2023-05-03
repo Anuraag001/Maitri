@@ -11,8 +11,7 @@
     </div>
   <% end %>
 
-
-
+  <div style="color:green">
   <div>
     <%= form.label :designation, style: "display: block" %>
     <%= form.text_field :designation %>
@@ -35,11 +34,13 @@
 
 
 <div>
+<br>
   <%= form.label :pictures, style: "display: block" %>
   <%= form.file_field :pictures,multiple:true %>
 </div>
 
   <div>
     <%= form.submit %>
+  </div>
   </div>
 <% end %>
