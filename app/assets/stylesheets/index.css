@@ -136,7 +136,7 @@ background-color: #fcacac;
 }
 .vwrapper #row1 {
   top:1000px;
-  
+
 }
 .vwrapper #row2 {
   background-color: palegoldenrod;
@@ -149,8 +149,8 @@ background-color: #fcacac;
   background-color: green;
   flex: 1 1 auto;
   display: flex;
-  
-  
+
+
 }
 
 .vwrapper #row3 #col1 {
@@ -169,13 +169,13 @@ background-color: #fcacac;
 .vwrapper #row3 #col3 {
   background-image: linear-gradient(to right, lightgrey,lightgoldenrodyellow);
   flex: 0 1 10%;
-  
+
 }
 .vwrapper #row4{
 
   flex: 1 1 auto;
   display: flex;
-  
+
 }
 
 #col2{
@@ -270,7 +270,7 @@ background-color: #fcacac;
   background-color:lightgreen ;
 height:60%;
 width:75px;
-position:fixed;
+margin-top:123px;
 float:left;
 top:27.5%;
 text-align: center;
@@ -393,7 +393,7 @@ footer{
   justify-content: left;
   flex-direction: row;
   text-align: left;
-  
+
 }
 
 .column1{
@@ -405,6 +405,7 @@ footer{
   width:25%;
   background-color: #e32323;
   text-align: center;
+  color: #000022;
 }
 .column3{
   width:30%;
