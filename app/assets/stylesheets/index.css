@@ -31,7 +31,7 @@ background-color: #fcacac;
   width: 100%;
   height: 100%;
   background-color: #FFC2C2;
-  background-image: url("https://img.freepik.com/premium-vector/cell-phone-sms-email-communications-seamless-pattern_738121-441.jpg?w=826");
+  background-image: url("https://images.pexels.com/photos/842682/pexels-photo-842682.jpeg?auto=compress&cs=tinysrgb&w=600");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -76,9 +76,7 @@ background-color: #fcacac;
   background-color: white;
   padding:3em;
   border-radius: 10px;
-  border:orange;
-  border-width: 20px 20px 20px 20px;
-  border-style: solid;
+
 
 }
 
@@ -267,7 +265,7 @@ background-color: #fcacac;
   color: grey;
 }
 .box{
-  background-color:lightgreen ;
+background-color:lightgreen ;
 height:60%;
 width:75px;
 margin-top:123px;
@@ -408,7 +406,6 @@ footer{
   width:25%;
   background-color: #e32323;
   text-align: center;
-  color: #000022;
 }
 .column3{
   width:30%;
