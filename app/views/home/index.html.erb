@@ -1,6 +1,10 @@
 <%= stylesheet_link_tag 'index'%>
 <%= stylesheet_link_tag 'chat'%>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
 <%= render 'partials/navbar' %>
 <div class="vwrapper">
   <div id="row1"></div>
@@ -12,7 +16,7 @@
       <br>
       <!--<div class="row_1"> <div class="col"> <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a> </div> <div class="col"> <p>Anuraag Bandaru venkata</p> <p>This is a recent chat</p> </div> </div>-->
 
-        
+
           <div class="container" id="chatter-name">
             <div class="row">
               <div class="col-2">
@@ -26,7 +30,7 @@
               </div>
 
 
-                <button id="start" class="btn btn-primary", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
+                <button id="start" class="btn btn-warning", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
               <div id="chat1">
                 <%= render 'home/chat' %>
               </div>
@@ -46,7 +50,7 @@
               </div>
 
 
-                <button id="start" class="btn btn-primary", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
+                <button id="start" class="btn btn-warning", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
               <div id="chat1">
                 <%= render 'home/chat' %>
               </div>
@@ -66,14 +70,14 @@
               </div>
 
 
-                <button id="start" class="btn btn-primary", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
+                <button id="start" class="btn btn-warning", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
               <div id="chat1">
                 <%= render 'home/chat' %>
               </div>
 
             </div>
           </div>
-        
+
 
     </div>
     <div id="col2">
@@ -203,7 +207,7 @@
 
 </div>
 <div id="row4">
-<%= render 'partials/footer' %>
+<%= render 'partials/footer1' %>
 </div>
 </div>
 
