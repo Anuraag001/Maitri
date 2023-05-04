@@ -9,3 +9,4 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= link footer1.css
