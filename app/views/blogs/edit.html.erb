@@ -1,16 +1,15 @@
 <%= stylesheet_link_tag 'index'%>
-<div class="show-blog">
-<h1>Editing blog</h1>
+<div class="card" id="new-blog">
+  <h5 class="card-header" style="text-align:center">Edit Blog</h5>
+  <div class="card-body">
 
-<%= render "form", blog: @blog %>
+<p class="card-text"><%= render "form", blog: @blog %></p>
 
-<br>
 
-<div>
 
 
   <%= link_to "Show this blog", @blog,class:"btn btn-warning",style:"font-size:large" %> 
    <b>or<b>
    <%= link_to "Back to blogs", blogs_path,class:"btn btn-warning",style:"font-size:large" %>
-</div>
+   </div>
 </div>

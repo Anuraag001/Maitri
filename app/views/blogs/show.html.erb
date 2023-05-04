@@ -1,11 +1,12 @@
 <%= stylesheet_link_tag 'index'%>
-<div class="show-blog">
+<div class="card" id="new-blog">
 <p style="color: green"><%= notice %></p>
-<h3 style="text-align:center">Showing blog</h3>
-<br>
-<%= render @blog %>
+  <h5 class="card-header" style="text-align:center">Show Blog</h5>
+<div class="card-body">
 
-<div>
+<p class="card-text"><%= render @blog %></p>
+
+
 <%= link_to "Edit this blog", edit_blog_path(@blog),class:"btn btn-warning" %>
    <b>or<b>
 <%= link_to "Back to blogs", blogs_path ,class:"btn btn-warning"%>
