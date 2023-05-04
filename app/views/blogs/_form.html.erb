@@ -11,36 +11,41 @@
     </div>
   <% end %>
 
-  <div style="color:green">
   <div>
-    <%= form.label :designation, style: "display: block" %>
-    <%= form.text_field :designation %>
+  <div class="input-group mb-3">
+    <%= form.label :designation,class:"input-group-text" ,id:"inputGroup-sizing-default"%>
+    <%= form.text_field :designation, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.text_field :content %>
+  
+
+<div class="input-group mb-3">
+   <%= form.label :content, class:"input-group-text" ,id:"inputGroup-sizing-default"%>
+    <%= form.text_field :content , class:"form-control"%>
+    </div>
+<div class="input-group mb-3">
+    <%= form.label :likes, class:"input-group-text" ,id:"inputGroup-sizing-default"%>
+    <%= form.number_field :likes , class:"form-control"%>
   </div>
 
-  <div>
-    <%= form.label :likes, style: "display: block" %>
-    <%= form.number_field :likes %>
-  </div>
-
-  <div>
-    <%= form.label :dislikes, style: "display: block" %>
-    <%= form.number_field :dislikes %>
+  <div class="input-group mb-3">
+    <%= form.label :dislikes,class:"input-group-text" ,id:"inputGroup-sizing-default" %>
+    <%= form.number_field :dislikes , class:"form-control"%>
   </div>
 
 
-<div>
-<br>
-  <%= form.label :pictures, style: "display: block" %>
-  <%= form.file_field :pictures,multiple:true %>
+<div class="input-group mb-3">
+  <%= form.label :pictures,class:"input-group-text" ,for:"inputGroupFile01" %>
+  <%= form.file_field :pictures,multiple:true ,class:"form-control" ,id:"inputGroupFile01"%>
 </div>
 
+
+
   <div>
-    <%= form.submit %>
+     <%= link_to "Back to blogs", blogs_path  ,class:"btn btn-outline-dark"%>
+     <%= form.submit class:"btn btn-primary" %>
   </div>
   </div>
 <% end %>
+
+
