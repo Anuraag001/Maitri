@@ -251,9 +251,7 @@ background-color: #fcacac;
   opacity: 75%;
 }
 
-#blog-card :hover{
-  background-color:lightblue;
-}
+
 #blog-last{
   font-size:x-large;
   -ms-flex-item-align: center;
@@ -465,4 +463,41 @@ height: 50%;
 }
 .column9{
   width:25%;
+}
+
+.comment_blog{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap:20px;
+  
+}
+
+#main_comment{
+  gap:10px;
+  justify-content: flex-start;
+}
+/*#add_comment{
+  width:250%;
+  align-items: center;
+}*/
+
+.rowa{
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+#comment_icon{
+  padding-left:20px;
+  padding-bottom:5px;
+}
+
+.comment-card{
+  width:90%;
+  padding:5% 2% 5% 2%;
+  height: fit-content;
+  background-color: white;
+  margin-left:5%;
+  border-radius:10px;
 }
