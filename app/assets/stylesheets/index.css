@@ -341,7 +341,7 @@ border-bottom-right-radius: 500%;
 #new-blog{
   border-radius: 5%;
   display: flex;
-  
+
  width:50%;
 
   /*background-image:linear-gradient(180deg,lightgreen,lightcoral);*/
@@ -471,7 +471,7 @@ height: 50%;
   flex-direction: column;
   text-align: left;
   gap:20px;
-  
+
 }
 
 #main_comment{
