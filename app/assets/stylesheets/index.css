@@ -252,10 +252,16 @@ background-color: #fcacac;
   opacity: 75%;
 }
 
-
+#comments{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #blog-last{
   font-size:x-large;
-  -ms-flex-item-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #chatter-name{
   padding-left:10px;
