@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
   get 'home/chat'
+<<<<<<< HEAD
   get 'home/anonymous'
+=======
+  get 'home/videochat'
+  get 'home/forums'
+>>>>>>> 488fc80dd01becf44db91293ccb731eeb9ff7bfe
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
