@@ -2,9 +2,9 @@ class HomeController < ApplicationController
   def index
     @blogs=Blog.all
   end
-  
+
   def chat
-    
+
   end
 
   def videochat
@@ -12,6 +12,10 @@ class HomeController < ApplicationController
   end
 
   def forums
+
+  end
+
+  def confession
 
   end
 

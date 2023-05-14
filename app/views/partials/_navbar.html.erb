@@ -1,30 +1,70 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary"  id="sticky-navi">
   <div class="container-fluid" id="temp">
-    <a class="navbar-brand" href="#"><%= image_tag 'logo',class:'logoT'%></a>
+    <a class="navbar-brand" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><%= image_tag 'logo',class:'logoT'%></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-        <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Video Chat</a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Confession</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Forums</a>
-      </li>
-      </ul>
-      <%= link_to 'LogOut',destroy_user_session_path,method: :delete,class:"btn btn-danger"%>
+  <div class="navbar-nav me-auto mb-2 mb-lg-0" style="display: flex;flex-direction:row ;gap:100px">
+    <div class="nav-item">
+      <%= link_to "Home", "/home/index", class: "btn btn-primary" %>
+    </div>
+    <div class="nav-item">
+      <%= link_to "Blogs", "/home/index", class: "btn btn-primary" %>
+    </div>
+    <div class="nav-item">
+      <%= link_to "Video Chat", "/home/videochat", class: "btn btn-primary" %>
+    </div>
+    <div class="nav-item">
+      <%= link_to "Confession", "/home/confession", class: "btn btn-primary" %>
+    </div>
+    <div class="nav-item">
+      <%= link_to "Forums", "/home/forums", class: "btn btn-primary" %>
+    </div>
+    <div class="nav-item">
+      <%= link_to "Anonymous Chat", "/home/anonymous", class: "btn btn-primary" %>
     </div>
   </div>
+  <div class="nav-item">
+    <%= button_tag "Logout", type: "button", class: "btn btn-danger", data: { bs_toggle: "modal", bs_target: "#logoutModal" } %>
+  </div>
+</div>
+
+  </div>
 </nav>
+</div>
+
+
+<div class="modal fade" id="logoutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="logoutModalLabel">Logout</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to log out?</p>
+      </div>
+      <div class="modal-footer">
+        <%= button_tag "Cancel", type: "button", class: "btn btn-secondary", data: { bs_dismiss: "modal" } %>
+        <%= link_to 'LogOut',destroy_user_session_path,method: :delete,class:"btn btn-danger"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Profile</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    Name:....<br>
+    Email:....<br>
+    etc...<br>
+  </div>
 </div>

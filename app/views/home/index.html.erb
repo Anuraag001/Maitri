@@ -7,9 +7,7 @@
 
 <%= render 'partials/navbar' %>
 <div class="vwrapper">
-  <div id="row1"></div>
 
-  <div id="row2"></div>
 
   <div id="row3">
     <div id="col1">
@@ -112,12 +110,25 @@
 
             <div class="sfs">
               <ul>
-                <% blog.pictures.each do |file| %>
-                  <li>
 
-                    <%= image_tag file %>
-                  </li>
-                <% end %>
+                  <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <% blog.pictures.each do |file| %>
+                      <div class="carousel-item active">
+                        <%= image_tag file %>
+                      </div>
+                    <% end %>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color:green"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" >
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="background-color:green"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+
               </ul>
               <br>
             </div>
@@ -127,6 +138,7 @@
             <div class="row">
               <div class="col">
                 <%= form_with(model: blog) do |form| %>
+
                 <% @blogs=blog.likes+1%>
                   <%= form.hidden_field :likes, value: @blogs %>
                   <h3 id="blog-last">
@@ -149,6 +161,7 @@
             <%end%>
           </div>
 
+
           <div class="col">
             <h3 id="blog-last">
               <a href="#">
@@ -170,6 +183,7 @@
       </div>
     </div>
 <div class="comment-card">
+
     <div class="comment_blog">
         <div class="rowa" id="main_comment">
               <div class="cola" style="width:8%">
@@ -186,6 +200,7 @@
   <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
 </svg></a>
               </div>
+
 
               </div>
 
@@ -240,6 +255,7 @@
 
 
     </div>
+
     </div>
     <% end%>
     <br><br>
@@ -286,6 +302,7 @@
 </div>
 <div id="row4">
 <%= render 'partials/footer1' %>
+
 </div>
 </div>
 

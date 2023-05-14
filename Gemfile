@@ -39,6 +39,7 @@ gem "jbuilder"
 
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'rails_admin'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
