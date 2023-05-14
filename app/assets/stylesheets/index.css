@@ -252,16 +252,10 @@ background-color: #fcacac;
   opacity: 75%;
 }
 
-#comments{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 #blog-last{
   font-size:x-large;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-item-align: center;
 }
 #chatter-name{
   padding-left:10px;
@@ -347,7 +341,7 @@ border-bottom-right-radius: 500%;
 #new-blog{
   border-radius: 5%;
   display: flex;
-
+  
  width:50%;
 
   /*background-image:linear-gradient(180deg,lightgreen,lightcoral);*/
@@ -477,7 +471,7 @@ height: 50%;
   flex-direction: column;
   text-align: left;
   gap:20px;
-
+  
 }
 
 #main_comment{

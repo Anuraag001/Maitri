@@ -1,0 +1,88 @@
+.container1{
+	font-family: 'quicksand';
+	max-width:90%;
+	margin: 0 auto;
+	padding: 2%;
+	background-color: #f0f391;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.anonymous-header {
+  height: 10%;
+}
+
+
+.message-box{
+  overflow-y: scroll;
+  background-color: #fff;
+  padding:3%;
+  height: 80vh;
+	border-radius: 4px;
+}
+
+.message{
+  clear: both;
+}
+
+.sent{
+  float:left;
+  background-color: lightgreen;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.received{
+  float:right;
+  background-color: lightblue;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.message-sent{
+  height: 10vh;
+  background-color: orange;
+}
+
+.message-form{
+  width: 100%;
+  display: flex;
+}
+
+.message-send{
+	padding: 5px;
+	background-color: #bec2b6;
+	display: flex;
+	border-radius: 5px;
+}
+
+
+
+.reply-main{
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	padding: 5px;
+
+}
+
+.reply-main textarea {
+  resize: none;
+  overflow: hidden;
+  padding: 5px !important;
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  box-shadow: none;
+  height: 100%;
+  font-size: 16px;
+}
+
+.emoji ion-icon{
+	padding: 2px;
+	font-size: 1.8em;
+}
+
+.reply-send ion-icon{
+	font-size: 1.8em;
+	padding: 2px;
+}
