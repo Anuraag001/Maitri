@@ -10,3 +10,4 @@
 //= require popper
 //= require bootstrap
 //= link footer1.css
+//= link video.css
