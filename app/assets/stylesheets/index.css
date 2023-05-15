@@ -4,7 +4,7 @@ body {
   margin: 0;
   font:normal 75% Arial, Quicksand, sans-serif;
   font-family: 'Quicksand';
-  background-color: #FFC2C2;
+  background-color: #616161;
 }
 
 
@@ -162,19 +162,20 @@ background-color: #fcacac;
   /*background-color: yellow;*/
   /* background-image: linear-gradient(to right, pink , yellow); */
   /* background-color:#FEFF86; */
+  background-image: linear-gradient(to right, lightgrey,lightgoldenrodyellow);
   overflow-y: scroll;
-  flex: 0 1 30%;
+  flex: 0 1 20%;
 }
 .vwrapper #row3 #col2 {
   background-image: linear-gradient(to right,lightblue ,lightgreen);
-  flex: 0 1 60%;
+  flex: 0 1 66%;
   text-align: center;
   overflow-y:scroll;
 
 }
 .vwrapper #row3 #col3 {
   background-image: linear-gradient(to right, lightgrey,lightgoldenrodyellow);
-  flex: 0 1 10%;
+  flex: 0 1 15%;
 
 }
 .vwrapper #row4{
@@ -214,7 +215,10 @@ background-color: #fcacac;
 
 .col_1{
   width:70px;
+  height: 70px;
   padding-right: 2px;
+  align-items: center;
+  justify-content: center;
   /*margin-right:-45px;*/
 }
 
@@ -228,9 +232,11 @@ background-color: #fcacac;
 
 .col_2{
   width:300px;
+  height: 70px;
   text-align: left;
   font-weight: bold;
-  height: fit-content;
+  display: flex;
+  align-items: center;
 }
 
 .card{
@@ -392,7 +398,7 @@ footer{
   font-family: "Open Sans";
   padding-top: 0px;
   color: #fff;
-  bottom:0;
+  bottom: 0%;
 }
 
 .footer-content{
@@ -401,23 +407,24 @@ footer{
   justify-content: left;
   flex-direction: row;
   text-align: left;
-  bottom: 0;
+  margin-bottom: 0%;
 }
 
 .column1{
   width:45%;
-  background-color: #f7f4f4;
+  background-color: #616161;
   min-height: 100%;
   color: #000022;
 }
 .column2{
   width:25%;
-  background-color: #f7f4f4;
+  background-color: #616161;
   text-align: center;
+  color: #000022;
 }
 .column3{
   width:30%;
-  background-color: #f7f4f4;
+  background-color: #616161;
   text-align: center;
   padding-bottom: 2px;
   color: #000022;
@@ -441,7 +448,7 @@ padding-top: 15px;
 flex-direction: row;
 display: flex;
 text-align: center;
-font-size: medium;
+font-size: large;
 }
 .row3{
 height:50%;
