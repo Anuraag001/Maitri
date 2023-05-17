@@ -1,14 +1,37 @@
 .container1{
-	font-family: 'quicksand';
-	max-width:90%;
+	
+display: flex;
 	margin: 0 auto;
-	padding: 2%;
+	padding: 1%;
 	background-color: #f0f391;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+ overflow-y: scroll;
+  
+}
+.col1{
+  min-height: 100%;
+  min-width: 25%;
+ position: relative;
+ margin-top: 350px;
+ display: flex;
+ 
 }
 
+
+#searchbutton{
+  margin-left: 150px;
+  margin-bottom: 480px;
+  height: 50px;
+ 
+}
+
+.col2{
+  height: 100%;
+  width: 75%;
+}
 .anonymous-header {
   height: 10%;
+ 
 }
 
 
@@ -18,10 +41,14 @@
   padding:3%;
   height: 80vh;
 	border-radius: 4px;
+  
+ 
 }
 
 .message{
   clear: both;
+  display: flex;
+  height: 45px;
 }
 
 .sent{
@@ -29,6 +56,14 @@
   background-color: lightgreen;
   padding: 5px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  font-size: large;
+  
+  
 }
 
 .received{
@@ -36,6 +71,12 @@
   background-color: lightblue;
   padding: 5px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  
+ 
 }
 
 .message-sent{
@@ -53,6 +94,7 @@
 	background-color: #bec2b6;
 	display: flex;
 	border-radius: 5px;
+ 
 }
 
 
@@ -79,10 +121,10 @@
 
 .emoji ion-icon{
 	padding: 2px;
-	font-size: 1.8em;
+	font-size: 3em;
 }
 
 .reply-send ion-icon{
-	font-size: 1.8em;
+	font-size: 3.2em;
 	padding: 2px;
 }
