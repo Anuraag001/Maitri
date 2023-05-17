@@ -12,26 +12,37 @@
 
 
   <div id="row3">
-    <div id="col1">
+    <div id="cold1">
+<div class="one">
+  Embrace the power of honesty and vulnerability. Speak your truth, unburden your soul, and find solace in this safe space of non-judgment and understanding.
+</div>
+
+<div class="one">
+  Confession is not betrayal. What you say or do doesn't matter; only feelings matter. If they could make me stop loving you that would be the real betrayal.
+</div>
+
+<div class="one">
+  Confession is not weakness. It takes strength and courage to acknowledge our flaws and seek forgiveness
+</div>
 
 
     </div>
     <div id="col2">
-      <br>
+
 
       <% Blog.all.each do |blog|%>
         <div class="card" id="blog-card">
           <div class="card-body">
             <div class="row">
               <div class="col_1">
-
-                <%= image_tag 'logo.png' ,style:"height:50px;width:50px;margin-top:4px;border-radius:24px"%>
-
+                <a href="#">
+                  <i class="bi bi-person-circle" style="font-size:50px;"></i>
+                </a>
               </div>
 
-              <div class="col_2" >
-                <p>MAITRI CONFESSIONS</p>
-
+              <div class="col_2" ,style="width:10%">
+                <p><%= blog.name%></p>
+                <p class="designation"><%= blog.designation%></p>
               </div>
 
               <hr>
@@ -48,13 +59,9 @@
 
             <div class="sfs">
 
-                <% blog.pictures.each do |file| %>
-
-
+                    <% blog.pictures.each do |file| %>
                     <%= image_tag file %>
-
-                <% end %>
-              
+                    <% end %>
               <br>
             </div>
 
@@ -63,6 +70,7 @@
             <div class="row">
               <div class="col">
                 <%= form_with(model: blog) do |form| %>
+
                 <% @blogs=blog.likes+1%>
                   <%= form.hidden_field :likes, value: @blogs %>
                   <h3 id="blog-last">
@@ -85,28 +93,35 @@
             <%end%>
           </div>
 
+
           <div class="col">
-            <h3 id="blog-last">
-              <a href="#">
-                <i class="bi bi-chat-right-text"></i>
-              </a></h3>
-              <h4 id="comments"> Comment </h4>
+            <div class="coll">
+              <div id="blog-last">
+                <a href="#" >
+                  <i class="bi bi-chat-right-text" ></i>
+                </a></div>
+                <div id="comments-1"> Comment </div>
+            </div>
+
           </div>
 
 
-          <div class="col">
-            <h3 id="blog-last">
-              <a href="#">
-                <i class="bi bi-bookmark-check"></i>
-              </a></h3>
-              <h4 id="comments">Bookmark</h4>
-          </div>
+          <div class="col"><br>
+            <div class="coll">
+              <div id="blog-last">
+                <a href="#">
+                  <i class="bi bi-bookmark-check"></i>
+                </a></div>
+                <div id="comments">Bookmark</div>
+            </div>
+            </div>
+
         </div>
 
-
       </div>
-    </div>
-<div class="comment-card">
+
+  <div class="comment-card">
+
     <div class="comment_blog">
         <div class="rowa" id="main_comment">
               <div class="cola" style="width:8%">
@@ -118,54 +133,55 @@
                             <label for="floatingTextarea">Your Comment</label>
                             </div>
               </div>
-              <div class="cola" style="width:10%;padding-top:5%">
-             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+              <div class="cola" style="width:10%;padding-top:2%;">
+             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
   <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
-</svg></a>
+  </svg></a>
               </div>
+
 
               </div>
 
-<br>
+  <br>
            <div class="rowa" style="gap:10px;padding-left:10%;">
               <div class="cola">
               <i class="bi bi-person-circle" id="comment_icon" style="font-size:30px;"></i>
               </div>
 
               <div class="cola">
-                      <div class="rowa">
+                      <div class="rowa" style="font-size:medium">
                       Name
                       </div>
 
-                      <div class="rowa" style="opacity:50%;color:grey">
+                      <div class="rowa" style="opacity:50%;color:grey; font-size:small">
                       date and Time
                       </div>
 
 
-              <div class="rowa"  style="align-self:flex-start;padding-left:10%;padding-top:3%;width:250%;font-size:20px">
+              <div class="rowa"  style="align-self:flex-start;padding-left:10%;padding-top:3%;width:250%;font-size:25px">
               This is the comment given to the post
               </div>
 
               </div>
           </div>
 
-<br>
+  <br>
            <div class="rowa" style="gap:10px;padding-left:10%;">
               <div class="cola">
               <i class="bi bi-person-circle" id="comment_icon" style="font-size:30px;"></i>
               </div>
 
               <div class="cola">
-                      <div class="rowa">
+                      <div class="rowa" style="font-size:medium">
                       Name
                       </div>
 
-                      <div class="rowa" style="opacity:50%;color:grey">
+                      <div class="rowa" style="opacity:50%;color:grey ;font-size:small">
                       date and Time
                       </div>
 
 
-              <div class="rowa"  style="align-self:flex-start;padding-left:10%;padding-top:3%;width:250%;font-size:20px">
+              <div class="rowa"  style="align-self:flex-start;padding-left:10%;padding-top:3%;width:250%;font-size:25px">
               This is the comment given to the post
               </div>
 
@@ -175,6 +191,8 @@
           </div>
 
 
+
+    </div>
 
     </div>
     </div>
@@ -184,37 +202,14 @@
 
 
 <div id="col3">
-  <div class="box">
-
-    <div class="c">
-    <div class="r">
-    <%= link_to '<i class="bi bi-plus-square-fill"style="font-size:50px;"  id="icon-1" onmouseover="toggleone()"  onmouseout="mouseone()"></i> '.html_safe ,new_blog_path%>
+  <div class="cdc">
+    <div class="rrr">
+    <%= link_to '<i class="bi bi-plus-square-fill" style="font-size:70px; color:yellow"  id="icon-1" onmouseover="toggleone()"  onmouseout="mouseone()"></i> '.html_safe ,new_blog_path%>
     </div>
-    <div id="ic-1">Write Confession</div>
+    <div class="f">
+    Wanna Confess?
     </div>
-
-      <br>
-
-    <div class="c">
-    <div class="r">
-    <%= link_to '<i class="bi bi-info-square-fill"style="font-size:50px;"  id="icon-2" onmouseover="toggletwo()" onmouseout="mousetwo()"></i>'.html_safe ,blogs_path(id:current_user.id)%>
-    </div>
-    <div id="ic-2">Show Confession</div>
-    </div>
-<br>
-    <div class="c">
-    <div class="r">
-    <%= link_to '<i class="bi bi-bookmark-check-fill"style="font-size:50px;" id="icon-3" onmouseover="togglethree()"  onmouseout="mousethree()"></i>'.html_safe ,new_blog_path%>
-    </div>
-    <div id="ic-3">Bookmark Confession</div>
-    </div>
-<br>
-    <div class="c">
-    <div class="r">
-    <%= link_to '<i class="bi bi-dash-square-fill"style="font-size:50px;" id="icon-4" onmouseover="togglefour()"  onmouseout="mousefour()" ></i>'.html_safe ,new_blog_path%>
-    </div>
-    <div id="ic-4">Delete Confession</div>
-    </div>
+  </div>
 
   </div>
 
@@ -238,19 +233,19 @@
 		}
 
     function toggleone() {
-			var section = document.getElementById("ic-1");
+			var section = document.getElementById("rrr");
 			section.style.display = "block"; /* Show the section */
 
-      var sec= document.getElementById("icon-1");
+      var sec= document.getElementById("rrr");
       sec.style.color="blue";
 		}
 
     function mouseone()
     {
-			var section = document.getElementById("ic-1");
+			var section = document.getElementById("rrr");
 			section.style.display = "none"; /* Show the section */
 
-      var sec= document.getElementById("icon-1");
+      var sec= document.getElementById("rrr");
       sec.style.color="lightgoldenrodyellow";
 		}
 
