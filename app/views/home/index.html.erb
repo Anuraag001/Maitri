@@ -79,7 +79,7 @@
 
     </div>
     <div id="col2">
-      <br>
+
 
       <% Blog.all.each do |blog|%>
         <div class="card" id="blog-card">
@@ -109,27 +109,10 @@
             <br>
 
             <div class="sfs">
-              <ul>
 
-                  <div id="carouselExample" class="carousel slide">
-                  <div class="carousel-inner">
                     <% blog.pictures.each do |file| %>
-                      <div class="carousel-item active">
-                        <%= image_tag file %>
-                      </div>
+                    <%= image_tag file %>
                     <% end %>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color:green"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" >
-                    <span class="carousel-control-next-icon" aria-hidden="true" style="background-color:green"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-
-              </ul>
               <br>
             </div>
 
@@ -171,7 +154,7 @@
           </div>
 
 
-          <div class="col">
+          <div class="col"><br>
             <h3 id="blog-last">
               <a href="#">
                 <i class="bi bi-bookmark-check"></i>
@@ -181,7 +164,7 @@
         </div>
 
       </div>
-    </div>
+
 <div class="comment-card">
 
     <div class="comment_blog">
@@ -256,6 +239,7 @@
 
     </div>
 
+    </div>
     </div>
     <% end%>
     <br><br>
