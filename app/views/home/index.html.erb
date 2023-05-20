@@ -11,79 +11,15 @@
 
   <div id="row3">
     <div id="col1">
-      <br>
-      <!--<div class="row_1"> <div class="col"> <a href="#"><i class="bi bi-person-circle" style="font-size:50px;"></i></a> </div> <div class="col"> <p>Anuraag Bandaru venkata</p> <p>This is a recent chat</p> </div> </div>-->
-
-
-          <div class="container" id="chatter-name">
-            <div class="row">
-              <div class="col-2">
-                <a href="#">
-                  <i class="bi bi-person-circle" style="font-size:50px;"></i>
-                </a>
-              </div>
-              <div class="col">
-                <p class="name">Anuraag Bandaru venkata</p>
-                <p class="recent">This is a recent chat</p>
-              </div>
-
-
-                <button id="start" class="btn btn-warning", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
-              <div id="chat1">
-                <%= render 'home/chat' %>
-              </div>
-
-            </div>
-          </div>
-          <div class="container" id="chatter-name">
-            <div class="row">
-              <div class="col-2">
-                <a href="#">
-                  <i class="bi bi-person-circle" style="font-size:50px;"></i>
-                </a>
-              </div>
-              <div class="col">
-                <p class="name">Nishchal Mayur</p>
-                <p class="recent">This is a recent chat</p>
-              </div>
-
-
-                <button id="start" class="btn btn-warning", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
-              <div id="chat1">
-                <%= render 'home/chat' %>
-              </div>
-
-            </div>
-          </div>
-          <div class="container" id="chatter-name">
-            <div class="row">
-              <div class="col-2">
-                <a href="#">
-                  <i class="bi bi-person-circle" style="font-size:50px;"></i>
-                </a>
-              </div>
-              <div class="col">
-                <p class="name">Nived Philip Thomas</p>
-                <p class="recent">This is a recent chat</p>
-              </div>
-
-
-                <button id="start" class="btn btn-warning", onclick="toggleSection()">  <i class="bi bi-chevron-right"></i></button>
-              <div id="chat1">
-                <%= render 'home/chat' %>
-              </div>
-
-            </div>
-          </div>
-
+    
 
     </div>
     <div id="col2">
 
 
       <% Blog.all.each do |blog|%>
-        <div class="card" id="blog-card">
-          <div class="card-body">
+        <div class="card">
+          <div class="card-body" style="padding:10px;">
             <div class="row">
               <div class="col_1">
                 <a href="#">
@@ -262,7 +198,7 @@
     <div id="ic-1">Add Blog</div>
     </div>
 
-      <br>
+
 
     <div class="c">
     <div class="r">
@@ -270,14 +206,14 @@
     </div>
     <div id="ic-2">Show Blogs</div>
     </div>
-<br>
+
     <div class="c">
     <div class="r">
     <%= link_to '<i class="bi bi-bookmark-check-fill"style="font-size:50px;" id="icon-3" onmouseover="togglethree()"  onmouseout="mousethree()"></i>'.html_safe ,new_blog_path%>
     </div>
     <div id="ic-3">Bookmark Blog</div>
     </div>
-<br>
+
     <div class="c">
     <div class="r">
     <%= link_to '<i class="bi bi-dash-square-fill"style="font-size:50px;" id="icon-4" onmouseover="togglefour()"  onmouseout="mousefour()" ></i>'.html_safe ,new_blog_path%>
