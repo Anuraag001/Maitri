@@ -1,35 +1,37 @@
 
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary"  id="sticky-navi">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid" id="temp">
     <a class="navbar-brand" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><%= image_tag 'logo',class:'logoT'%></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <div class="navbar-nav me-auto mb-2 mb-lg-0" style="display: flex;flex-direction:row ;gap:100px">
+
     <div class="nav-item">
-      <%= link_to "Home", "/home/index", class: "btn btn-primary" %>
+      <%= link_to "Home", "/home/index", class: "btn btn-warning" %>
     </div>
     <div class="nav-item">
-      <%= link_to "Blogs", "/home/index", class: "btn btn-primary" %>
+      <%= link_to "Blogs", "/home/index", class: "btn btn-warning" %>
     </div>
     <div class="nav-item">
-      <%= link_to "Video Chat", "/home/videochat", class: "btn btn-primary" %>
+      <%= link_to "Video Chat", "/home/videochat", class: "btn btn-warning" %>
     </div>
     <div class="nav-item">
-      <%= link_to "Confession", "/home/confession", class: "btn btn-primary" %>
+      <%= link_to "Confession", "/home/confession", class: "btn btn-warning" %>
     </div>
     <div class="nav-item">
-      <%= link_to "Chat", "/home/forums", class: "btn btn-primary" %>
+
+      <%= link_to "Chat", "/home/forums", class: "btn btn-warning" %>
     </div>
     <div class="nav-item">
-      <%= link_to "Anonymous Chat", "/home/anonymous", class: "btn btn-primary" %>
+      <%= link_to "Anonymous Chat", "/home/anonymous", class: "btn btn-warning" %>
     </div>
-  </div>
-  <div class="nav-item">
-    <%= button_tag "Logout", type: "button", class: "btn btn-danger", data: { bs_toggle: "modal", bs_target: "#logoutModal" } %>
-  </div>
+    <div class="nav-item">
+      <%= button_tag "Logout", type: "button", class: "btn btn-danger", data: { bs_toggle: "modal", bs_target: "#logoutModal" } %>
+    </div>
+
+
 </div>
 
   </div>

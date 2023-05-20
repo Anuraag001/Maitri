@@ -1,74 +1,42 @@
 <%= stylesheet_link_tag 'index'%>
-<div class="my-blogs">
-<p style="color: green"><%= notice %></p>
+<p style="text-align:center;font-size:xxx-Large;">MY BLOGS</p>
 
-<h1 style="text-align:center">My Blogs</h1>
+  <div class="full_my_blog">
+  <div class="main_blog_show">
+    <% Blog.all.each do |blog|%>
+    <div class="talk-bubble tri-right bordert roundt btm-left-in">
+      <div class="talktext">
+        <div class="showing_blog_now">
+        <div class="head">
+          <%= blog.content%>
+        </div>
+        <div class="show_con">
+          <% blog.pictures.each do |file| %>
+          <%= image_tag file, style: "width: 200px; height: 150px;" %>
 
-<div id="blogs" >
-  <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col" style="width:15%">Name</th>
-      <th scope="col" style="width:15%">Designation</th>
-      <th scope="col" style="width:40%">Content</th>
-      <th scope="col" style="width:10%">Likes</th>
-      <th scope="col" style="width:10%">Dislikes</th>
-      <th scope="col" style="width:10%"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <tr><td>hello</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>1243</td>
-      <td>23</td>
-      <td><div class="button_showing">
-        <button class="btn btn-info"style="width:40%">edit</button>
-        <button class="btn btn-danger" style="width:40%">Delete</button>
-      </div></tr>
+          <% end %>
+        </div>
+        <div class="like_dislike_show">
+          <i class="bi bi-hand-thumbs-up"><%= blog.likes%></i>
+          <i class="bi bi-hand-thumbs-down"><%= blog.dislikes%></i>
+        </div>
+        <div class="button_show">
+          <%= link_to "Edit", edit_blog_path(blog), class: "btn btn-primary",style:"width:10%" %>
+          <%= link_to "Delete", blog_path(blog), method: :delete, class: "btn btn-danger", style: "width:10%" %>
+            
 
-    </tr>
-    <tr>
-      <tr><td>hello</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>235</td>
-      <td>32</td>
-      <td><div class="button_showing">
-        <button class="btn btn-info"style="width:40%">edit</button>
-        <button class="btn btn-danger" style="width:40%">Delete</button>
-      </div></tr>
+        </div>
 
-    </tr>
-    <tr>
-      <tr><td>hello</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>2</td>
-      <td>12</td>
-      <td><div class="button_showing">
-        <button class="btn btn-info"style="width:40%">edit</button>
-        <button class="btn btn-danger" style="width:40%">Delete</button>
-      </div></tr>
+        </div>
 
-    </tr>
-    <tr>
-      <tr><td>hello</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>30</td>
-      <td>50</td>
-      <td><div class="button_showing">
-        <button class="btn btn-info"style="width:40%">edit</button>
-        <button class="btn btn-danger" style="width:40%">Delete</button>
-      </div></tr>
+      </div>
+    </div>
 
-    </tr>
-  </tbody>
-</table>
-</div>
-<%= link_to "New blog", new_blog_path ,class:"btn btn-light",style:"border-radius:20px"%>
-<br>
-<%= link_to "Back To Blogs Main Page", "/home/index" ,class:"btn btn-light" ,style:"border-radius:20px"%>
-</div>
+    <%end%>
+  </div>
+  <div class="my_blog_buttons">
+    <%= link_to "Add New Blog", new_blog_path, class: "btn btn-primary" ,style:"width:200px"%>
+
+    <%= link_to "Back to Blogs","/home/index", class: "btn btn-info" ,style:"width:200px"%>
+  </div>
+  </div>

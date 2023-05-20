@@ -12,3 +12,4 @@
 //= link footer1.css
 //= link anonymous.css
 //= link video.css
+//= link chatpage.css
