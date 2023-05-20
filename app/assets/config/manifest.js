@@ -13,3 +13,4 @@
 //= link anonymous.css
 //= link video.css
 //= link chatpage.css
+//= link chats.css
