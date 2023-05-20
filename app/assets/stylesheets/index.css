@@ -4,7 +4,7 @@ body {
   margin: 0;
   font:normal 75% Arial, Quicksand, sans-serif;
   font-family: 'Quicksand';
-  background-color:lightgoldenrodyellow;
+  background-color: palegoldenrod;
 }
 
 
@@ -427,19 +427,20 @@ footer{
 
 .column1{
   width:45%;
-  background-color: #616161;
+  background-color: palegoldenrod;
   min-height: 100%;
   color: #000022;
 }
 .column2{
   width:25%;
-  background-color: #616161;
+  background-color: palegoldenrod;
   text-align: center;
   color: #000022;
+ 
 }
 .column3{
   width:30%;
-  background-color: #616161;
+  background-color: palegoldenrod;
   text-align: center;
   padding-bottom: 2px;
   color: #000022;
@@ -471,7 +472,10 @@ height:50%;
 
 .row4{
 height: 50%;
-
+}
+.row5{
+  display: flex;
+  justify-content: space-around;
 }
 
 #cold1{

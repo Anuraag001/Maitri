@@ -1,10 +1,41 @@
+<%= stylesheet_link_tag 'anonymous'%>
 <%= stylesheet_link_tag 'index'%>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
 <%= render 'partials/navbar' %>
-<br><br>
-<p>This is the forums page to be developed</p>
+<div class="container1">
+<div class="col1">
+
+</div>
+
+<div class="col2">
+  <div class="Anonymous-header">
+    <h2 style="text-align:center; font-family:fantasy">MAITRI CHAT</h2>
+  </div>
+  <div class="message-box">
+    <div class="message sent">
+      <p style="padding-top:10px">Hello! How are you?</p>
+    </div>
+    <div class="message received">
+      <p style="padding-top:10px">Hello! I am fine</p>
+    </div>
+  </div>
+  <div class="message-send">
+    <div class="emoji">
+      <ion-icon name="happy-outline"></ion-icon>
+      <ion-icon name="attach-outline"></ion-icon>
+    </div>
+    <div class="reply-main">
+      <textarea class="form-control"  rows="1"></textarea>
+    </div>
+    <div class="reply-send">
+      <ion-icon name="send-outline"></ion-icon>
+    </div>
+  </div>
+</div>
+
+</div>
 <%= render 'partials/footer' %>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
