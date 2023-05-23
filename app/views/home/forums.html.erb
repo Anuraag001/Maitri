@@ -26,9 +26,9 @@
        I love you baby and i miss you meet you soon okay
         </div>
       </div>
-      
+
     </div>
-    
+
     <div class="rows3">
     <div class="col3">
     <i class="bi bi-person-circle"></i>
@@ -49,7 +49,7 @@
     <div class="col4">
     <div class="rows6">
     NISHCHAL MAYUR
-  
+
     </div>
      <div class="rows7 text-truncate">
      I love you baby
@@ -76,26 +76,36 @@
   <div class="Anonymous-header">
     <h2 style="text-align:center; font-family:fantasy">MAITRI CHAT</h2>
   </div>
-  <div class="message-box">
-    <div class="message sent">
-      <p style="padding-top:10px">Hello! How are you?</p>
+  <div class="main_chat">
+    <div class="if_empty_chat">
+      <%= image_tag 'logo.png',style:"width: 500px; height: 500px;opacity:50%" ,class:"rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"%>
     </div>
-    <div class="message received">
-      <p style="padding-top:10px">Hello! I am fine</p>
+    <div class="if_not_empty_chat">
+
+      <div class="message-box">
+        <div class="message sent">
+          <p style="padding-top:10px">Hello! How are you?</p>
+        </div>
+        <div class="message received">
+          <p style="padding-top:10px">Hello! I am fine</p>
+        </div>
+      </div>
+      <div class="message-send">
+        <div class="emoji">
+          <ion-icon name="happy-outline"></ion-icon>
+          <ion-icon name="attach-outline"></ion-icon>
+        </div>
+        <div class="reply-main">
+          <textarea class="form-control"  rows="1"></textarea>
+        </div>
+        <div class="reply-send">
+          <ion-icon name="send-outline"></ion-icon>
+        </div>
+      </div>
+      </div>
     </div>
-  </div>
-  <div class="message-send">
-    <div class="emoji">
-      <ion-icon name="happy-outline"></ion-icon>
-      <ion-icon name="attach-outline"></ion-icon>
-    </div>
-    <div class="reply-main">
-      <textarea class="form-control"  rows="1"></textarea>
-    </div>
-    <div class="reply-send">
-      <ion-icon name="send-outline"></ion-icon>
-    </div>
-  </div>
+
+
 </div>
 
 </div>
