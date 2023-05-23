@@ -78,3 +78,7 @@ header {
 #chat1{
   display: none;
 }
+
+.if_not_empty_chat{
+	display: none
+}

@@ -1,22 +1,22 @@
 .container1{
-	
+
     display: flex;
         margin: 0 auto;
         padding: 1%;
         background-color: #f0f391;
         box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
      overflow-y: scroll;
-      
+
     }
     .col1{
-      min-height: 100%;
+      min-height: 1000px;
       min-width: 25%;
      position: relative;
      background-color: #fff;
      display: flex;
      flex-direction: column;
      margin: 10px;
-     
+
     }
     .search {
         padding-top: 10px;
@@ -24,7 +24,7 @@
         position: relative;
         display: flex;
       }
-      
+
       .searchTerm {
         width: 100%;
         border: 3px solid #00B4CC;
@@ -35,11 +35,11 @@
         outline: none;
         color: #9DBFAF;
       }
-      
+
       .searchTerm:focus{
         color: #00B4CC;
       }
-      
+
       .searchButton {
         width: 40px;
         height: 40px;
@@ -105,33 +105,33 @@
         padding-top: 5px;
     }
 
-    
+
     .col2{
-      height: 100%;
+      min-height: 1000px;
       width: 75%;
     }
     .anonymous-header {
       height: 10%;
-     
+
     }
-    
-    
+
+
     .message-box{
       overflow-y: scroll;
       background-color: #fff;
       padding:3%;
       height: 80vh;
         border-radius: 4px;
-      
-     
+
+
     }
-    
+
     .message{
       clear: both;
       display: flex;
       height: 45px;
     }
-    
+
     .sent{
       float:left;
       background-color: lightgreen;
@@ -143,10 +143,10 @@
       text-align: center;
       align-content: center;
       font-size: large;
-      
-      
+
+
     }
-    
+
     .received{
       float:right;
       background-color: lightblue;
@@ -156,38 +156,38 @@
       align-items: center;
       justify-content: center;
       font-size: large;
-      
-     
+
+
     }
-    
+
     .message-sent{
       height: 10vh;
       background-color: orange;
     }
-    
+
     .message-form{
       width: 100%;
       display: flex;
     }
-    
+
     .message-send{
         padding: 5px;
         background-color: #bec2b6;
         display: flex;
         border-radius: 5px;
-     
+
     }
-    
-    
-    
+
+
+
     .reply-main{
         justify-content: space-between;
         align-items: center;
         width: 90%;
         padding: 5px;
-    
+
     }
-    
+
     .reply-main textarea {
       resize: none;
       overflow: hidden;
@@ -199,13 +199,30 @@
       height: 100%;
       font-size: 16px;
     }
-    
+
     .emoji ion-icon{
         padding: 2px;
         font-size: 3em;
     }
-    
+
     .reply-send ion-icon{
         font-size: 3.2em;
         padding: 2px;
     }
+
+		.if_not_empty_chat{
+			display:none;
+		}
+
+		.if_empty_chat{
+				display: flex;
+				flex-direction:row;
+				justify-content: center;
+				align-items: center;
+				min-height:1000px;
+
+		}
+
+		.logoT{
+			font-size: 1000px;
+		}
