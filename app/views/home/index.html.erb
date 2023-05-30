@@ -17,7 +17,7 @@
         <div class="my_profile">
         <div class="profile_logo">
         <div class="pro">
-          <i class="bi bi-person-circle" style="font-size:120px; top:-10%"></i>
+          <%= image_tag @user.profile,style:"width:150px;height:150px;border-radius:50%;" %>
         </div>
 
         <div id="proco">
@@ -26,17 +26,10 @@
 
         </div>
         <div class="count_profile">
+    
         <div class="pro_count">
           <div class="count">
-            45
-          </div>
-          <div class="count_name">
-              Friends
-          </div>
-        </div>
-        <div class="pro_count">
-          <div class="count">
-            23
+              <%= @user.noofblog%>
           </div>
           <div class="count_name">
             Blogs
@@ -44,18 +37,18 @@
         </div>
         <div class="pro_count">
           <div class="count">
-              5
+            <%= @user.noofconfession%>
           </div>
           <div class="count_name">
-            Confession
+            Confessions
           </div>
         </div>
         </div>
         <div class="profile_name">
-        Full Name Of The User
+        <%= @user.name%>
         </div>
         <div class="profile-designation">
-          designation Of The User
+          <%= @user.designation%>
         </div>
 
         <div class="profile_bio">

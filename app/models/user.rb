@@ -6,4 +6,10 @@ class User < ApplicationRecord
          has_many :blogs
         has_many :bookmarks
         has_one_attached :profile
+
+        before_create :no_of_confession
+        def no_of_confession
+           self.noofconfession  =0
+           self.noofblog = 0
+        end
 end

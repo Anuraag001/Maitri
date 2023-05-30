@@ -5,11 +5,14 @@
 <div class="logincard">
   <div class="one-div">
     <%= image_tag 'logo.png',style:"width: 200px; height: 200px;margin:90px 0px 0px 10px" ,class:"rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"%>
-    <p>seirhuhguohsroihojgoirwjgoiawjkls</p>
+    <h2>"WELCOME TO MAITRI!"</h2>
     <ul>
-      <li>Welcome to Maitri</li>
+
       <li>Website made for chatting, blogging and video chat</li>
+      <li>Website made to share your Experience,share your Life Stories,confess things and have fun</li>
       <li>Feel free to make an account you will definatly enjoy it</li>
+      <li>Login and also Invite your friends. Have fun!!</li>
+
     </ul>
   </div>
   <div class="two-div">
@@ -24,6 +27,11 @@
       </div><br>
 
       <div class="form-floating" style="font-size:150%;margin:20px 0px 20px 0px">
+        <%= f.text_field :name,class:"form-control", id:"floatingPassword" ,placeholder:"Password",style:"opacity:70%"%>
+        <%= f.label :name ,for:"floatingPassword",style:"opacity:70%"%>
+      </div>
+
+      <div class="form-floating" style="font-size:150%;margin:20px 0px 20px 0px">
         <%= f.password_field :password, autocomplete: "current-password" ,class:"form-control", id:"floatingPassword" ,placeholder:"Password",style:"opacity:70%"%>
         <%= f.label :password ,for:"floatingPassword",style:"opacity:70%"%>
       </div>
@@ -34,10 +42,10 @@
         <%= f.label :password_confirmation ,for:"floatingPassword",style:"opacity:70%"%>
       </div>
       <br>
-      <div class="field" style="font-size:150%;margin:20px 0px 20px 0px">
-
-        <%= f.file_field :profile%>
-      </div>
+      <div class="input-group mb-3">
+      <label class="input-group-text" for="inputGroupFile01">Profile Photo</label>
+     <%= f.file_field :profile, class:"form-control" ,id:"inputGroupFile01"%>
+    </div>
       <br>
 
       <div class="d-grid gap-2 col-6 " style="background-color:lightgoldenrodyellow">
