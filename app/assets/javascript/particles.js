@@ -12,7 +12,7 @@
         "value": "#ffffff"
       },
       "shape": {
-        "type": "image",
+        "type": ["image","image"],
         "stroke": {
           "width": 0,
           "color": "#000000"
