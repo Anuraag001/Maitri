@@ -33,7 +33,12 @@
         <%= f.password_field :password_confirmation, autocomplete: "current-password" ,class:"form-control", id:"floatingPassword" ,placeholder:"Password",style:"opacity:70%"%>
         <%= f.label :password_confirmation ,for:"floatingPassword",style:"opacity:70%"%>
       </div>
-      <br><br>
+      <br>
+      <div class="field" style="font-size:150%;margin:20px 0px 20px 0px">
+
+        <%= f.file_field :profile%>
+      </div>
+      <br>
 
       <div class="d-grid gap-2 col-6 " style="background-color:lightgoldenrodyellow">
         <%= f.submit "Sign up" ,:class=>'btn btn-warning',style:"width:200%"%>

@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          has_many :blogs
         has_many :bookmarks
+        has_one_attached :profile
 end
