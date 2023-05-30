@@ -1,27 +1,41 @@
 <%= stylesheet_link_tag 'index'%>
-<%= render partial:"partials/navbar"%>
-<div id="particles-js">
+<div id="particles-js"></div>
 <div class="logincard">
-<h2>Forgot your password?</h2>
+  <div class="one-div">
+    <%= image_tag 'logo.png',style:"width: 200px; height: 200px;margin:90px 0px 0px 10px" ,class:"rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"%>
+    <p>seirhuhguohsroihojgoirwjgoiawjkls</p>
+    <ul>
+      <li>Welcome to Maitri</li>
+      <li>Website made for chatting, blogging and video chat</li>
+      <li>Feel free to make an account you will definatly enjoy it</li>
+    </ul>
+  </div>
+  <div class="two-div">
+    <h2>Forgot your password?</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div><br>
+      <div class="form-floating mb-3" style="font-size:150%;margin:20px 0px 20px 0px">
+        <%= f.email_field :email,placeholder:"name@example.com",class:"form-control" ,id:"floatingInput" ,style:"opacity:70%"%>
+        <%= f.label :email ,for:"floatingInput"  ,style:"opacity:70%"%>
+      </div><br>
 
-  <div class="btn btn-light">
-    <%= f.submit "Send me reset password instructions" ,:class=>'btn btn-primary'%>
-  </div><br>
-<% end %><br>
+      <div>
+<%= f.submit "Send me reset password instructions" ,:class=>'btn btn-warning'%>
+      </div>
 
-<div class="field">
-<p style="font-size:20px;text-align:left">Go To</p>
-<%= render "devise/shared/links" %>
-</div>
-</div>
+
+    <% end %><br>
+
+    <div class="field" style="background-color:lightgoldenrodyellow;font-size:150%;margin:20px 0px 20px 0px">
+
+      <p style="font-size:17px">Already have an account?<%= link_to "Log in", new_session_path(resource_name), style:"text-decoration:none"%></p>
+      <p style="font-size:17px;padding-left:4px">Dont have an account<%= link_to "Sign up", new_registration_path(resource_name) ,style:"text-decoration:none"%></p>
+    </div>
+
+  </div>
+
 <embed src="<%= audio_path 'singara.mp3'%>" loop="true" autostart="true" width="2"
          height="0">
 <!-- particles.js container -->
@@ -32,7 +46,7 @@
     particlesJS("particles-js", {
       "particles": {
         "number": {
-          "value": 10,
+          "value": 30,
           "density": {
             "enable": true,
             "value_area": 800
@@ -44,17 +58,18 @@
         "shape": {
           "type": "image",
           "stroke": {
-            "width": 0,
-            "color": "#000000"
+            "width": 2,
+            "color": "#F3BCC8"
           },
           "polygon": {
             "nb_sides": 5
           },
           "image": {
-            "src": '<%= asset_path 'heart.png' %>',
-            "width": 100,
-            "height": 100
-          }
+            "src":'<%= asset_path 'heart2.png' %>',
+            "width": 10,
+            "height": 10
+          },
+
         },
         "opacity": {
           "value": 0.5,
@@ -67,7 +82,7 @@
           }
         },
         "size": {
-          "value": 90,
+          "value": 50,
           "random": true,
           "anim": {
             "enable": false,
@@ -86,7 +101,7 @@
         "move": {
           "enable": true,
           "speed": 6,
-          "direction": "none",
+          "direction": "top",
           "random": false,
           "straight": false,
           "out_mode": "out",
@@ -103,7 +118,7 @@
         "events": {
           "onhover": {
             "enable": true,
-            "mode": "grab"
+            "mode": "repulse"
           },
           "onclick": {
             "enable": true,
@@ -126,8 +141,8 @@
             "speed": 3
           },
           "repulse": {
-            "distance": 200,
-            "duration": 0.4
+            "distance": 100,
+            "duration": 0.1
           },
           "push": {
             "particles_nb": 4
@@ -139,6 +154,7 @@
       },
       "retina_detect": true
     });
+
 
 
     /* ---- stats.js config ---- */
@@ -160,5 +176,7 @@
       requestAnimationFrame(update);
     };
     requestAnimationFrame(update);
+
+
 
 </script>

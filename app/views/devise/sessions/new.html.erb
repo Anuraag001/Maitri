@@ -13,17 +13,20 @@
           </div>
           <div class="two-div">
             <p>Log In</p>
+
+
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                <div class="input-group mb-3" style="margin:20px 0px 20px 0px">
-                  <%= f.label :email ,class:"input-group-text" ,id:"inputGroup-sizing-default" %>
-                  <%= f.email_field :email, autofocus: true, autocomplete: "email" ,type:"text" ,class:"form-control" %>
+                <div class="form-floating mb-3" style="font-size:150%;margin:20px 0px 20px 0px">
+                  <%= f.email_field :email,placeholder:"name@example.com",class:"form-control" ,id:"floatingInput" ,style:"opacity:70%"%>
+                  <%= f.label :email ,for:"floatingInput"  ,style:"opacity:70%"%>
                 </div>
                 <br>
-                <div class="input-group mb-3" style="margin:20px 0px 20px 0px">
-                  <%= f.label :password ,class:"input-group-text" ,id:"inputGroup-sizing-default"%>
-                  <%= f.password_field :password, autocomplete: "current-password" ,type:"password" ,class:"form-control"%>
+                <div class="form-floating" style="font-size:150%;margin:20px 0px 20px 0px">
+
+                  <%= f.password_field :password, autocomplete: "current-password" ,class:"form-control", id:"floatingPassword" ,placeholder:"Password",style:"opacity:70%"%>
+                  <%= f.label :password ,for:"floatingPassword",style:"opacity:70%"%>
                 </div>
-                <br><br>
+
                 <!--<% if devise_mapping.rememberable? %>
                   <div class="field">
                     <%= f.check_box :remember_me %>
@@ -31,19 +34,19 @@
                   </div>
                 <% end %>-->
 
-                <div class="field" style="text-align:center;background-color:lightgoldenrodyellow">
-              <%= link_to "Forgot your password?", new_password_path(resource_name) ,style:"font-size:100%;text-decoration:none;background-color:lightgoldenrodyellow;color:black"%>
+                <div class="field" style="background-color:lightgoldenrodyellow;margin-top:-5%">
+              <%= link_to "Forgot your password?", new_password_path(resource_name) ,style:"font-size:20px;text-decoration:none;background-color:lightgoldenrodyellow;"%>
               </div>
-              <br><br><br>
-                <div class="d-grid gap-2 col-6 mx-auto">
-                  <%= f.submit "Log in", :class=>'btn btn-warning'%>
+              <br><br>
+                <div class="d-grid gap-2 col-6 " style="text-align:center">
+                  <%= f.submit "Log in", :class=>'btn btn-warning',style:"width:200%"%>
                 </div>
               <% end %>
 
               <br><br><br>
               <div class="field" style="background-color:lightgoldenrodyellow">
-              <a style="font-size:30px">Dont have an account?</a>
-              <%= link_to "Sign up", new_registration_path(resource_name),style:"text-decoration:none;font-size:30px"%>
+              <a style="font-size:20px">Dont have an account?</a>
+              <%= link_to "Sign up", new_registration_path(resource_name),style:"text-decoration:none;font-size:20px"%>
 
             </div>
           </div>
