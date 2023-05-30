@@ -182,7 +182,18 @@ background-color: #fcacac;
   -webkit-user-select: none;
 }
 
-
+.logincard1{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left:16%;
+  top:20%;
+  min-width:55%;
+  min-height:35%;
+  max-width:70%;
+  background-color:lightgoldenrodyellow;
+  border-radius: 9px;
+}
 
 .logincard{
   position: absolute;
@@ -426,7 +437,9 @@ background-color: #fcacac;
   color: grey;
   opacity: 75%;
 }
+#sg{
 
+}
 
 #blog-last{
   font-size:x-large;
@@ -812,7 +825,8 @@ flex-direction: row;
 
 }
 .bordert{
-  border: 8px solid #666;
+  border: 8px solid gold;
+
 }
 .roundt{
   border-radius: 30px;
@@ -820,7 +834,11 @@ flex-direction: row;
 	-moz-border-radius: 30px;
 
 }
-
+.buttonsbtn{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+}
 
 .tri-right.bordert.btm-left-in:before {
 	content: ' ';
@@ -832,7 +850,7 @@ flex-direction: row;
   top: auto;
 	bottom: -40px;
 	border: 20px solid;
-	border-color: #666 transparent transparent #666;
+	border-color: lightyellow transparent transparent lightyellow;
 }
 .tri-right.btm-left-in:after{
 	content: ' ';
@@ -1071,4 +1089,15 @@ flex-direction: row;
   top:0.5%;
   left:20%;
   z-index:1;
+}
+
+.showing_my_blogs{
+  position: absolute;
+
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  overflow-y: scroll;
+
 }
