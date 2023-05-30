@@ -21,15 +21,21 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
+      <div class="form-floating" style="font-size:150%;margin:20px 0px 20px 0px">
+        <%= f.text_field :name,class:"form-control", id:"floatingPassword" ,placeholder:"Password",style:"opacity:70%"%>
+        <%= f.label :name ,for:"floatingPassword",style:"opacity:70%"%>
+      </div><br>
+
+      <div class="input-group mb-3">
+        <%= f.label :designation,'Designation',for:"inputGroupSelect01", class:"input-group-text"%>
+        <%= f.select(:designation, ['student', 'faculty','external'], {:include_blank => 'Choose...'},{ :class => 'form-select' ,:id => "u-type",:required => true}) %>
+      </div>
+
       <div class="form-floating mb-3" style="font-size:150%;margin:20px 0px 20px 0px">
         <%= f.email_field :email,placeholder:"name@example.com",class:"form-control" ,id:"floatingInput" ,style:"opacity:70%"%>
         <%= f.label :email ,for:"floatingInput"  ,style:"opacity:70%"%>
       </div><br>
 
-      <div class="form-floating" style="font-size:150%;margin:20px 0px 20px 0px">
-        <%= f.text_field :name,class:"form-control", id:"floatingPassword" ,placeholder:"Password",style:"opacity:70%"%>
-        <%= f.label :name ,for:"floatingPassword",style:"opacity:70%"%>
-      </div>
 
       <div class="form-floating" style="font-size:150%;margin:20px 0px 20px 0px">
         <%= f.password_field :password, autocomplete: "current-password" ,class:"form-control", id:"floatingPassword" ,placeholder:"Password",style:"opacity:70%"%>
