@@ -1,42 +1,192 @@
 <%= stylesheet_link_tag 'index'%>
-<p style="text-align:center;font-size:xxx-Large;">MY BLOGS</p>
 
-  <div class="full_my_blog">
-  <div class="main_blog_show">
-    <% Blog.all.each do |blog|%>
-    <div class="talk-bubble tri-right bordert roundt btm-left-in">
-      <div class="talktext">
-        <div class="showing_blog_now">
-        <div class="head">
-          <%= blog.content%>
-        </div>
-        <div class="show_con">
-          <% blog.pictures.each do |file| %>
-          <%= image_tag file, style: "width: 200px; height: 150px;" %>
 
-          <% end %>
-        </div>
-        <div class="like_dislike_show">
-          <i class="bi bi-hand-thumbs-up"><%= blog.likes%></i>
-          <i class="bi bi-hand-thumbs-down"><%= blog.dislikes%></i>
-        </div>
-        <div class="button_show">
-          <%= link_to "Edit", edit_blog_path(blog), class: "btn btn-primary",style:"width:10%" %>
-          <%= link_to "Delete", blog_path(blog), method: :delete, class: "btn btn-danger", style: "width:10%" %>
-            
+  <div id="particles-js"></div>
+
+  <div class="showing_my_blogs">
+
+
+  <p style="text-align:center;font-size:xxx-Large;">MY BLOGS</p>
+
+    <div class="full_my_blog">
+    <div class="main_blog_show">
+      <% Blog.all.each do |blog|%>
+      <div class="talk-bubble tri-right bordert roundt btm-left-in">
+        <div class="talktext">
+          <div class="showing_blog_now">
+          <div class="head">
+            <%= blog.content%>
+          </div>
+          <div class="show_con">
+            <% blog.pictures.each do |file| %>
+            <%= image_tag file, style: "width: 200px; height: 150px;" %>
+
+            <% end %>
+          </div>
+          <div class="like_dislike_show">
+            <i class="bi bi-hand-thumbs-up"><%= blog.likes%></i>
+            <i class="bi bi-hand-thumbs-down"><%= blog.dislikes%></i>
+          </div>
+          <div class="button_show">
+            <%= link_to "Edit", edit_blog_path(blog), class: "btn btn-primary",style:"width:10%" %>
+            <%= link_to "Delete", blog_path(blog), method: :delete, class: "btn btn-danger", style: "width:10%" %>
+
+
+          </div>
+
+          </div>
 
         </div>
-
-        </div>
-
       </div>
+
+      <%end%>
     </div>
+    <div class="my_blog_buttons">
+      <%= link_to "Add New Blog", new_blog_path, class: "btn btn-primary" ,style:"width:200px"%>
 
-    <%end%>
-  </div>
-  <div class="my_blog_buttons">
-    <%= link_to "Add New Blog", new_blog_path, class: "btn btn-primary" ,style:"width:200px"%>
+      <%= link_to "Back to Blogs","/home/index", class: "btn btn-info" ,style:"width:200px"%>
+    </div>
+    </div>
+    </div>
+  <!-- particles.js container -->
 
-    <%= link_to "Back to Blogs","/home/index", class: "btn btn-info" ,style:"width:200px"%>
-  </div>
-  </div>
+  <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
+  <script type="text/javascript">
+
+      particlesJS("particles-js", {
+        "particles": {
+          "number": {
+            "value": 30,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "image",
+            "stroke": {
+              "width": 2,
+              "color": "#F3BCC8"
+            },
+            "polygon": {
+              "nb_sides": 5
+            },
+            "image": {
+              "src":'<%= asset_path 'heart2.png' %>',
+              "width": 10,
+              "height": 10
+            },
+
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 50,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 20,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": false,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.0,
+            "width": 0
+          },
+          "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "top",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "repulse"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 100,
+              "duration": 0.1
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      });
+
+
+
+      /* ---- stats.js config ---- */
+
+      var count_particles, stats, update;
+      stats = new Stats;
+      stats.setMode(0);
+      stats.domElement.style.position = 'absolute';
+      stats.domElement.style.left = '0px';
+      stats.domElement.style.top = '0px';
+      document.body.appendChild(stats.domElement);
+      count_particles = document.querySelector('.js-count-particles');
+      update = function() {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+          count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+
+
+
+  </script>
