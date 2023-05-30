@@ -8,7 +8,109 @@ body {
 
 }
 
+/*.two-div a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
 
+.two-div a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.two-div a span {
+  position: absolute;
+  display: block;
+}
+
+.two-div a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.two-div a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}*/
 
 canvas {
   display: block;
@@ -36,12 +138,12 @@ background-color: #fcacac;
   height: 100%;
   top:0%;
   left:0%;
-  background-color:lightgoldenrodyellow;
+  background-color:black;
   overflow-x: hidden;
-  background-image: url("https://images.pexels.com/photos/842682/pexels-photo-842682.jpeg?auto=compress&cs=tinysrgb&w=600");
+  /*background-image: url("https://images.pexels.com/photos/842682/pexels-photo-842682.jpeg?auto=compress&cs=tinysrgb&w=600");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 50%;*/
 
 }
 .foot_main_page{
@@ -78,25 +180,59 @@ background-color: #fcacac;
 }
 
 .logincard{
-  display:flex;
-  z-index:3;
-  width:fit-content;
-  left:40%;
-  top:30%;
-  flex-direction: column;
-  position:absolute;
-  background-color: white;
-  padding:3em;
-  border-radius: 10px;
-
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left:22%;
+  top:20%;
+  min-width:55%;
+  min-height:35%;
+  background-color:lightgoldenrodyellow;
+  border-radius: 9px;
+}
+.one-div{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  width: 100%;
+  height:100%;
+  row-gap:20px;
 
 }
 
+.one-div li{
+  font-size: 20px;
+}
 
-
- .logincard p{
+.one-div p{
   text-align: center;
-  font-size: 200%;
+  font-size: 30px;
+}
+
+.one-div ul{
+  padding-left: 80px;
+  padding-right:25px;
+}
+
+.two-div{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  height:180%;
+  width:100%;
+  padding-right:  150px 20px 150px 0px;
+  margin: 80px 0px 80px 0px;
+
+  align-items: center;
+}
+
+
+ .two-div p{
+  text-align: center;
+  font-size: 400%;
 }
 
 .field{

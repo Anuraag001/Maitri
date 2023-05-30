@@ -2,40 +2,52 @@
 <div id="particles-js"></div>
 
         <div class="logincard">
-        <p>Log In</p>
-          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-            <div class="field">
-              <%= f.label :email  %><br />
-              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-            </div><br>
+          <div class="one-div">
+            <%= image_tag 'logo.png',style:"width: 200px; height: 200px;margin:90px 0px 0px 10px" ,class:"rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"%>
+            <p>seirhuhguohsroihojgoirwjgoiawjkls</p>
+            <ul>
+              <li>Welcome to Maitri</li>
+              <li>Website made for chatting, blogging and video chat</li>
+              <li>Feel free to make an account you will definatly enjoy it</li>
+            </ul>
+          </div>
+          <div class="two-div">
+            <p>Log In</p>
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class="input-group mb-3" style="margin:20px 0px 20px 0px">
+                  <%= f.label :email ,class:"input-group-text" ,id:"inputGroup-sizing-default" %>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email" ,type:"text" ,class:"form-control" %>
+                </div>
+                <br>
+                <div class="input-group mb-3" style="margin:20px 0px 20px 0px">
+                  <%= f.label :password ,class:"input-group-text" ,id:"inputGroup-sizing-default"%>
+                  <%= f.password_field :password, autocomplete: "current-password" ,type:"text" ,class:"form-control"%>
+                </div>
+                <br><br>
+                <!--<% if devise_mapping.rememberable? %>
+                  <div class="field">
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me %><br>
+                  </div>
+                <% end %>-->
 
-            <div class="field">
-              <%= f.label :password %><br />
-              <%= f.password_field :password, autocomplete: "current-password" %>
-            </div><br>
-
-            <% if devise_mapping.rememberable? %>
-              <div class="field">
-                <%= f.check_box :remember_me %>
-                <%= f.label :remember_me %><br>
+                <div class="field" style="text-align:center;background-color:lightgoldenrodyellow">
+              <%= link_to "Forgot your password?", new_password_path(resource_name) ,style:"font-size:100%;text-decoration:none;background-color:lightgoldenrodyellow;color:black"%>
               </div>
-            <% end %>
+              <br><br><br>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  <%= f.submit "Log in", :class=>'btn btn-warning'%>
+                </div>
+              <% end %>
 
-            <div class="field" ,style="text-align:center">
-          <%= link_to "Forgot your password?", new_password_path(resource_name) %>
-          </div><br>
+              <br><br><br>
+              <div class="field" style="background-color:lightgoldenrodyellow">
+              <a style="font-size:30px">Dont have an account?</a>
+              <%= link_to "Sign up", new_registration_path(resource_name),style:"text-decoration:none;font-size:30px"%>
 
-            <div class="d-grid gap-2 col-6 mx-auto">
-              <%= f.submit "Log in", :class=>'btn btn-primary'%>
             </div>
-          <% end %><br>
+          </div>
 
-
-          <div class="field">
-          <a style="font-size:20px">Dont have an account</a>
-          <%= link_to "Sign up", new_registration_path(resource_name) %>
-
-        </div>
         </div>
 
 
@@ -65,14 +77,14 @@
         "shape": {
           "type": "image",
           "stroke": {
-            "width": 0,
-            "color": "#000000"
+            "width": 2,
+            "color": "#F3BCC8"
           },
           "polygon": {
             "nb_sides": 5
           },
           "image": {
-            "src":'<%= asset_path 'heart.png' %>',
+            "src":'<%= asset_path 'heart2.png' %>',
             "width": 10,
             "height": 10
           },
