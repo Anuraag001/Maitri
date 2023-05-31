@@ -21,17 +21,22 @@ class RoomsController < ApplicationController
 
   # POST /rooms or /rooms.json
   def create
+    @room=Room.new(room_params)
+    @rooms = Room.find_by(senderid: @room.senderid, receiverid: @room.receiverid)
+    if @rooms == nil
     @room = Room.new(room_params)
-
     respond_to do |format|
       if @room.save
-        format.html { redirect_to room_url(@room), notice: "Room was successfully created." }
+        format.html { redirect_to home_chatstart_url(id:@room.id,user:@room.senderid), notice: "Room was successfully created." }
         format.json { render :show, status: :created, location: @room }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @room.errors, status: :unprocessable_entity }
       end
     end
+  else
+    redirect_to home_chatstart_url(id:@rooms.id,user:@room.senderid)
+  end
   end
 
   # PATCH/PUT /rooms/1 or /rooms/1.json
@@ -65,6 +70,6 @@ class RoomsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def room_params
-      params.require(:room).permit(:name, :senderid, :receiverid)
+      params.require(:room).permit(:name, :senderid, :receiverid,:id)
     end
 end
