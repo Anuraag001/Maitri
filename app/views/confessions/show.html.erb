@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @confession %>
+
+<div>
+  <%= link_to "Edit this confession", edit_confession_path(@confession) %> |
+  <%= link_to "Back to confessions", confessions_path %>
+
+  <%= button_to "Destroy this confession", @confession, method: :delete %>
+</div>

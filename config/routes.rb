@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
+  resources :confessions
   resources :comments
+  # routes.rb
+  # routes.rb
+  # routes.rb
+  # routes.rb
+  resources :comments, only: [:create]
+
+post '/home/index', to: 'home#create', as: 'home_comments'
   resources :blogs
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users

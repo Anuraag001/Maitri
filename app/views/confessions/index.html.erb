@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Confessions</h1>
+
+<div id="confessions">
+  <% @confessions.each do |confession| %>
+    <%= render confession %>
+    <p>
+      <%= link_to "Show this confession", confession %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New confession", new_confession_path %>

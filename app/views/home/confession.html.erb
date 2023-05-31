@@ -30,7 +30,7 @@
     <div id="col2">
 
 
-      <% Blog.all.each do |blog|%>
+      <% Confession.all.each do |confession|%>
         <div class="card" id="blog-card">
           <div class="card-body">
             <div class="row">
@@ -42,7 +42,7 @@
 
               <div class="col_2" ,style="width:10%">
                 <p style="padding-top:20px">Maitri Confession</p>
-                
+
               </div>
 
               <hr>
@@ -51,17 +51,20 @@
             </div>
 
             <div class="row">
-              <p><%= blog.content%>
+              <p><%= confession.title%>
               </p>
             </div>
 
             <br>
 
             <div class="sfs">
+              <%if confession.avatars.attached? %>
+                  <td><%confession.avatars.each do |file|%>
+                      <%= image_tag file %>
+                       <% end %></td>
+                  <% else %>
 
-                    <% blog.pictures.each do |file| %>
-                    <%= image_tag file %>
-                    <% end %>
+                  <% end %>
               <br>
             </div>
 
@@ -69,27 +72,27 @@
 
             <div class="row">
               <div class="col">
-                <%= form_with(model: blog) do |form| %>
+                <%= form_with(model: confession) do |form| %>
 
-                <% @blogs=blog.likes+1%>
-                  <%= form.hidden_field :likes, value: @blogs %>
+
+                  <%= form.hidden_field :likes, value:(confession.likes || 0) + 1%>
                   <h3 id="blog-last">
                     <a href="#"><%= button_tag( :class => "button_green") do %>
                       <i class="bi bi-hand-thumbs-up"></i>
                     <% end %>
-                  </a><%= blog.likes%></h3>
+                  </a><%= confession.likes%></h3>
               <%end%>
             </div>
 
             <div class="col">
-              <%= form_with(model: blog) do |form| %>
-              <% @blogs1=blog.dislikes+1%>
-                <%= form.hidden_field :dislikes, value: @blogs1 %>
+              <%= form_with(model: confession) do |form| %>
+
+                <%= form.hidden_field :dislikes,  value:(confession.dislikes || 0) + 1 %>
                 <h3 id="blog-last">
                   <a href="#"><%= button_tag( :class => "button_green") do %>
                     <i class="bi bi-hand-thumbs-down"></i>
                   <% end %>
-                </a><%= blog.dislikes%></h3>
+                </a><%= confession.dislikes%></h3>
             <%end%>
           </div>
 
@@ -120,81 +123,10 @@
 
       </div>
 
-  <div class="comment-card">
-
-    <div class="comment_blog">
-        <div class="rowa" id="main_comment">
-              <div class="cola" style="width:8%">
-                          <i class="bi bi-person-circle" id="comment_icon" style="font-size:30px;"></i>
-              </div>
-              <div class="cola" style="width:70%">
-                            <div class="form-floating" id="add_comment">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea">Your Comment</label>
-                            </div>
-              </div>
-              <div class="cola" style="width:10%;padding-top:2%;">
-             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
-  <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
-  </svg></a>
-              </div>
-
-
-              </div>
-
-  <br>
-           <div class="rowa" style="gap:10px;padding-left:10%;">
-              <div class="cola">
-              <i class="bi bi-person-circle" id="comment_icon" style="font-size:30px;"></i>
-              </div>
-
-              <div class="cola">
-                      <div class="rowa" style="font-size:medium">
-                      Name
-                      </div>
-
-                      <div class="rowa" style="opacity:50%;color:grey; font-size:small">
-                      date and Time
-                      </div>
-
-
-              <div class="rowa"  style="align-self:flex-start;padding-left:10%;padding-top:3%;width:250%;font-size:25px">
-              This is the comment given to the post
-              </div>
-
-              </div>
-          </div>
-
-  <br>
-           <div class="rowa" style="gap:10px;padding-left:10%;">
-              <div class="cola">
-              <i class="bi bi-person-circle" id="comment_icon" style="font-size:30px;"></i>
-              </div>
-
-              <div class="cola">
-                      <div class="rowa" style="font-size:medium">
-                      Name
-                      </div>
-
-                      <div class="rowa" style="opacity:50%;color:grey ;font-size:small">
-                      date and Time
-                      </div>
-
-
-              <div class="rowa"  style="align-self:flex-start;padding-left:10%;padding-top:3%;width:250%;font-size:25px">
-              This is the comment given to the post
-              </div>
 
 
 
-              </div>
-          </div>
 
-
-
-    </div>
-
-    </div>
     </div>
     <% end%>
     <br><br>
@@ -204,7 +136,7 @@
 <div id="col3">
   <div class="cdc">
     <div class="rrr">
-    <%= link_to '<i class="bi bi-plus-square-fill" style="font-size:70px; color:yellow"  id="icon-1" onmouseover="toggleone()"  onmouseout="mouseone()"></i> '.html_safe ,new_blog_path%>
+    <%= link_to '<i class="bi bi-plus-square-fill" style="font-size:70px; color:yellow"  id="icon-1" onmouseover="toggleone()"  onmouseout="mouseone()"></i> '.html_safe ,new_confession_path%>
     </div>
     <div class="f">
     Wanna Confess?
