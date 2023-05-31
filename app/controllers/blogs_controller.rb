@@ -12,6 +12,18 @@ class BlogsController < ApplicationController
   def show
 
   end
+  def book
+    @blog = Blog.find(params[:id])
+    @user = User.find(params[:userid])
+    @bookmark = Bookmark.new(user: @user, blog: @blog)
+
+    if @bookmark.save
+      redirect_to home_index_path, notice: 'Blog bookmarked successfully.'
+    else
+      redirect_to home_index_path, alert: 'Failed to bookmark the blog.'
+    end
+  end
+
 
   # GET /blogs/new
   def new
