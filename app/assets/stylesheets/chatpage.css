@@ -13,7 +13,8 @@ body {
   align-items: stretch;
   align-content: stretch;
   height:1000px;
-  background: url('<% asset_image "confess_back" %>');
+  background: url('<%= asset_url("confess_back.png") %>');
+
 }
 .vwrapper #row1 {
   top:1000px;
@@ -35,13 +36,13 @@ body {
 }
 
 #col1{
-  background-color:#fbfa7d;
+  /*background-color:#fbfa7d;*/
 }
 
 .vwrapper #row3 #col1 {
   /*background-color: yellow;*/
   /* background-image: linear-gradient(to right, pink , yellow); */
-   background-color:lightgoldenrodyellow;
+   /*background-color:lightgoldenrodyellow;*/
   /*background-image: linear-gradient(to right, lightgrey,lightgoldenrodyellow);*/
   flex: 0 1 24%;
   min-width: 24%;
