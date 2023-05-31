@@ -175,7 +175,7 @@
       </div>
       <div class="cola" style="width:70%">
         <div class="form-floating" id="add_comment">
-          <%= form_with(model: Comment.new,  url: comments_path) do |form| %>
+          <%= form_for Comment.new, url: comments_path(id:@user.id,blogid:blog.id) do |form| %>
             <%= form.text_field :title, class: "form-control", id: "floatingTextarea", placeholder: "Leave a comment here" %>
 
         </div>
