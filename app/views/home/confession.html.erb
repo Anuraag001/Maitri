@@ -77,8 +77,8 @@
 
                   <%= form.hidden_field :likes, value:(confession.likes || 0) + 1%>
                   <h3 id="blog-last">
-                    <a href="#"><%= button_tag( :class => "button_green") do %>
-                      <i class="bi bi-hand-thumbs-up"></i>
+                    <a href="#" style="text-decoration:none"><%= button_tag( :class => "button_green", style:"border:none;background-color:white") do %>
+                      <i class="bi bi-hand-thumbs-up" style="background-color:white"></i>
                     <% end %>
                   </a><%= confession.likes%></h3>
               <%end%>
@@ -89,8 +89,8 @@
 
                 <%= form.hidden_field :dislikes,  value:(confession.dislikes || 0) + 1 %>
                 <h3 id="blog-last">
-                  <a href="#"><%= button_tag( :class => "button_green") do %>
-                    <i class="bi bi-hand-thumbs-down"></i>
+                  <a href="#" style="text-decoration:none"><%= button_tag( :class => "button_green", style:"border:none;background-color:white") do %>
+                    <i class="bi bi-hand-thumbs-down" style="background-color:white"></i>
                   <% end %>
                 </a><%= confession.dislikes%></h3>
             <%end%>
