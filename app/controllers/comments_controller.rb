@@ -23,10 +23,13 @@ class CommentsController < ApplicationController
   # POST /comments or /comments.json
 
   def create
+    @user=User.find(params[:id])
+    @blog=Blog.find(params[:blogid])
     @comment = Comment.new(comment_params)
-
+    @comment.user=@user
+    @comment.blog=@blog
     if @comment.save
-      redirect_to home_index_path, notice: 'Comment was successfully created.'
+      redirect_to home_index_path(id:@user.id), notice: 'Comment was successfully created.'
     else
       render 'home/index'
     end

@@ -496,7 +496,7 @@ padding-bottom: 10%;*/
 border-top-right-radius: 500%;
 border-bottom-right-radius: 500%;
 gap:20px;
-z-index: 2;
+
 }
 .box .c i{
   color:lightgoldenrodyellow;
@@ -985,13 +985,12 @@ flex-direction: row;
   align-items: center;
   position: relative; /* Add position property */
 }
-
 .back_profile {
   background-color: lightgrey;
   position: absolute;
-  min-height: 50%;
-  min-width: 25%;
-  left:20px;
+  height: 400px;
+  width: 400px;
+  left:13px;
   top:210px;
   border-radius: 25px;
 
@@ -1016,12 +1015,12 @@ flex-direction: row;
 }
 
 #proco{
-  padding-right:100px;
+  padding-top: 4px;
+  padding-right:13px;
   display: flex;
   justify-content: center;
   width:100%;
 }
-
 .pro{
   display: flex;
   justify-content: center;
