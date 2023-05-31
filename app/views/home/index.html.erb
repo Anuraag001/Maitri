@@ -56,10 +56,20 @@
               <%= @user.designation%>
             </div>
 
-            <div class="profile_bio">
-            <div class="truncate-line-clamp">
-              This is the place to write the bio...A paragraph is a self-contained unit of discourse in writing dealing with a particular point or idea...
-            </div>
+          </div>
+
+
+          <div class="col"><br>
+            <div class="coll">
+              <div id="blog-last">
+                <% @bookmak = Bookmark.find_by(blog_id: blog.id , user_id: @user.id)%>
+                <% if @bookmak %>
+                <%= link_to '<i class="bi bi-bookmark-check-fill"></i>'.html_safe, home_index_path, method: :post %>
+                <% else%>
+                  <%= link_to '<i class="bi bi-bookmark-check"></i>'.html_safe, book_blog_path(id: blog.id, userid: @user.id), method: :post %>
+                <% end %>
+                </div>
+                <div id="comments">Bookmark</div>
             </div>
             </div>
             <div class="show_status">
@@ -255,6 +265,12 @@
                   This is the comment given to the post
                   </div>
 
+    <div class="c">
+    <div class="r">
+    <%= link_to '<i class="bi bi-bookmark-check-fill"style="font-size:50px;" id="icon-3" onmouseover="togglethree()"  onmouseout="mousethree()"></i>'.html_safe ,blogs_path(id:current_user.id)%>
+    </div>
+    <div id="ic-3">Bookmark Blog</div>
+    </div>
 
 
                   </div>
