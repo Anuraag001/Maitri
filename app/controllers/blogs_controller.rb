@@ -39,6 +39,8 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     @blog.user=current_user
     @blog.name=@blog.user.email
+    @blog.likes=0
+    @blog.dislikes=0
     respond_to do |format|
       if @blog.save
         format.html { redirect_to blog_url(@blog), notice: "Blog was successfully created." }

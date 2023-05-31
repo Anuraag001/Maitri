@@ -194,25 +194,26 @@
       </div>
 
 <div class="comment-card">
-
     <div class="comment_blog">
         <div class="rowa" id="main_comment">
               <div class="cola" style="width:8%">
                           <i class="bi bi-person-circle" id="comment_icon" style="font-size:30px;"></i>
               </div>
               <div class="cola" style="width:70%">
-                            <div class="form-floating" id="add_comment">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea">Your Comment</label>
+                <% form_with(model: @comment) do |form| %>
+                <div class="form-floating" id="add_comment">
+
+                            <%= form.text_field :title,class:"form-control" ,placeholder:"Leave a comment here" ,id:"floatingTextarea" %>
+                                  <%= form.label :Comment, style: "display: block",for:"floatingTextarea" %>
+
+
                             </div>
               </div>
               <div class="cola" style="width:10%;padding-top:2%;">
-             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
-  <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
-</svg></a>
+         <%= form.submit %>
               </div>
 
-
+  <% end %>
               </div>
 
 <br>
@@ -220,10 +221,11 @@
               <div class="cola">
               <i class="bi bi-person-circle" id="comment_icon" style="font-size:30px;"></i>
               </div>
-
+              <% @comm= Comment.where(blog_id:blog.id)%>
+<%=@comm.each do |comment|%>
               <div class="cola">
                       <div class="rowa" style="font-size:medium">
-                      Name
+
                       </div>
 
                       <div class="rowa" style="opacity:50%;color:grey; font-size:small">
@@ -236,32 +238,11 @@
               </div>
 
               </div>
+              <%end%>
           </div>
 
 <br>
-           <div class="rowa" style="gap:10px;padding-left:10%;">
-              <div class="cola">
-              <i class="bi bi-person-circle" id="comment_icon" style="font-size:30px;"></i>
-              </div>
 
-              <div class="cola">
-                      <div class="rowa" style="font-size:medium">
-                      Name
-                      </div>
-
-                      <div class="rowa" style="opacity:50%;color:grey ;font-size:small">
-                      date and Time
-                      </div>
-
-
-              <div class="rowa"  style="align-self:flex-start;padding-left:10%;padding-top:3%;width:250%;font-size:25px">
-              This is the comment given to the post
-              </div>
-
-
-
-              </div>
-          </div>
 
 
 
