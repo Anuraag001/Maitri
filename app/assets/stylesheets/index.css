@@ -697,6 +697,7 @@ height: 50%;
 .row5{
   display: flex;
   justify-content: space-around;
+  padding-left: 13%;
 }
 
 #cold1{
