@@ -4,7 +4,7 @@ body {
   margin: 0;
   font:normal 75% Arial, Quicksand, sans-serif;
   font-family: 'Quicksand';
-  background-color: #f7f7b7;
+  /*background-color: #f7f7b7;*/
 }
 .gold{
     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
@@ -136,13 +136,30 @@ background-color: #fcacac;
 }
 
 #particles-js {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   top:0%;
   left:0%;
   background-color:black;
   overflow-x: hidden;
+
+  /*background-image: url("https://images.pexels.com/photos/842682/pexels-photo-842682.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;*/
+
+}
+
+#particle1-js {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  top:0%;
+  left:0%;
+  background-color:black;
+  overflow-x: hidden;
+  z-index: -5;
   /*background-image: url("https://images.pexels.com/photos/842682/pexels-photo-842682.jpeg?auto=compress&cs=tinysrgb&w=600");
   background-repeat: no-repeat;
   background-size: cover;
@@ -193,6 +210,9 @@ background-color: #fcacac;
   max-width:70%;
   background-color:lightgoldenrodyellow;
   border-radius: 9px;
+}
+.full{
+  position: absolute;
 }
 
 .logincard{
@@ -299,7 +319,8 @@ background-color: #fcacac;
   align-items: stretch;
   align-content: stretch;
   height:1000px;
-  background-color: #f0f391;
+  /*background-color: #f0f391;*/
+
 }
 .vwrapper #row1 {
   top:1000px;
@@ -313,7 +334,7 @@ background-color: #fcacac;
   z-index:10;*/
 }
 .vwrapper #row3 {
-  background-color: green;
+
   flex: 1 1 auto;
   display: flex;
 
@@ -347,7 +368,7 @@ background-color: #fcacac;
 
 
 .vwrapper #row3 #col3 {
-  background-color:#f0f391;
+
   /*background-image: linear-gradient(to right, lightgrey,lightgoldenrodyellow);*/
   flex: 0 1 15%;
 
@@ -459,7 +480,7 @@ background-color: #fcacac;
   color: grey;
 }
 .box{
-background-color:lightgrey ;
+position:absolute;
 height:50%;
 width:75px;
 
@@ -475,10 +496,10 @@ padding-bottom: 10%;*/
 border-top-right-radius: 500%;
 border-bottom-right-radius: 500%;
 gap:20px;
-
+z-index: 2;
 }
 .box .c i{
-  color:lightgoldenrodyellow;
+  /*color:lightgoldenrodyellow;*/
 }
 .c{
   flex-direction: column;
@@ -997,7 +1018,7 @@ flex-direction: row;
 #proco{
   padding-right:100px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   width:100%;
 }
 
@@ -1052,6 +1073,7 @@ flex-direction: row;
   border-radius: 25px;
   padding:20px;
   max-height:250px;
+  z-index:5;
   overflow-y: scroll;
 }
 
