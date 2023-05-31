@@ -6,6 +6,7 @@ class User < ApplicationRecord
          has_many :blogs
         has_many :bookmarks
         has_one_attached :profile
+        has_many :comments
 
         before_create :no_of_confession
         def no_of_confession
