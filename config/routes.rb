@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :messages
+  resources :rooms
   resources :confessions
   resources :comments
   # routes.rb
@@ -14,7 +16,7 @@ post '/home/index', to: 'home#create', as: 'home_comments'
   devise_for :users
   get 'home/index'
   get 'home/chat'
-
+  get 'home/chatstart'
   get 'home/anonymous'
 
   get 'home/videochat'
