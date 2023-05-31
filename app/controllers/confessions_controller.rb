@@ -4,19 +4,23 @@ class ConfessionsController < ApplicationController
   # GET /confessions or /confessions.json
   def index
     @confessions = Confession.all
+    redirect_to home_confession_path
   end
 
   # GET /confessions/1 or /confessions/1.json
   def show
+    redirect_to home_confession_path
   end
 
   # GET /confessions/new
   def new
     @confession = Confession.new
+
   end
 
   # GET /confessions/1/edit
   def edit
+    redirect_to home_confession_path
   end
 
   # POST /confessions or /confessions.json
@@ -38,7 +42,7 @@ class ConfessionsController < ApplicationController
   def update
     respond_to do |format|
       if @confession.update(confession_params)
-        format.html { redirect_to confession_url(@confession), notice: "Confession was successfully updated." }
+        format.html { redirect_to home_confession_path, notice: "Confession was successfully updated." }
         format.json { render :show, status: :ok, location: @confession }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -50,7 +54,6 @@ class ConfessionsController < ApplicationController
   # DELETE /confessions/1 or /confessions/1.json
   def destroy
     @confession.destroy
-
     respond_to do |format|
       format.html { redirect_to confessions_url, notice: "Confession was successfully destroyed." }
       format.json { head :no_content }
