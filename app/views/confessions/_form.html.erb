@@ -10,18 +10,23 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :Confess, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
-  <div>
-    <%= form.label :Images, style: "display: block" %>
-    <%= form.file_field :avatars,multiple:true %>
+<div class="jtwot" style="display:flex;flex-direction:column;align-items:center;">
+  <div class="form-floating">
+    <%= form.label :Confess ,for:"floatingTextarea"%>
+    <%= form.text_field :title, class: "form-control", id:"floatingTextarea",style:"width:400px"%>
   </div>
 
-
-  <div>
-    <%= form.submit %>
+  <br><br>
+  <div class="input-group mb-3">
+    <%= form.label :Images ,for:"floatingTextarea2",class:"input-group-text" %>
+    <%= form.file_field :avatars,multiple:true,type:"file" ,class:"form-control" ,id:"inputGroupFile01" %>
   </div>
+
+<br>
+  <div style="display:flex;flex-direction:row;gap:10px">
+    <%= form.submit class:"btn btn-warning"%>
+    <%= link_to "Back to confessions", confessions_path ,class:"btn btn-warning"%>
+  </div>
+
+</div>
 <% end %>

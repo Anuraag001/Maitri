@@ -226,6 +226,20 @@ background-color: #fcacac;
   background-color:lightgoldenrodyellow;
   border-radius: 9px;
 }
+
+.logcard1{
+  position: absolute;
+  display: flex;position: absolute;
+  display: flex;
+  flex-direction: row;
+  left:10%;
+  top:7%;
+  min-width:55%;
+  min-height:35%;
+  background-color:lightgoldenrodyellow;
+  border-radius: 9px;
+
+}
 .one-div{
   display: flex;
   flex-direction:column;
@@ -269,6 +283,24 @@ background-color: #fcacac;
  .two-div p{
   text-align: center;
   font-size: 400%;
+}
+
+.three-div{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  height:180%;
+  width:100%;
+  padding-right:  150px 20px 150px 0px;
+  margin: 80px 0px 80px 0px;
+
+  align-items: center;
+}
+
+.three-div p{
+ text-align: center;
+ font-size: 400%;
 }
 
 .field{
