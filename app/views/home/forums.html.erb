@@ -6,12 +6,7 @@
 <div class="container1">
 <div class="col1">
     <div class="rows1">
-    <div class="search">
-      <input type="text" class="searchTerm" placeholder="Search for chats...">
-      <button type="submit" class="searchButton">
-      <i class="bi bi-search"></i>
-     </button>
-   </div>
+<center><b><h1>User Active</h1></b></center>
     </div>
     <div class="border" style="width:100%;height:1px">
    </div>
@@ -27,19 +22,33 @@
    </div>
 
 <% User.all.each do |user|%>
-    <div class="rows5">
+
+
+<%=  button_to rooms_path(room: { name: @user.id, senderid: current_user.id, receiverid: user.id }), method: :post do %>
+  <div class="rows5">
     <div class="col3">
-    <i class="bi bi-person-circle"></i>
+      <i class="bi bi-person-circle"></i>
     </div>
     <div class="col4">
-    <div class="rows6">
-    <b><%= user.name%></b>
-    </div>
-     <div class="rows7 text-truncate">
-<%= user.designation%>
+      <div class="rows6">
+        <% if user.name !=nil%>
+        <b><%= user.name %></b>
+        <%else%>
+        <b>Anonymous user</b>
+        <%end%>
+      </div>
+      <div class="rows7 text-truncate">
+        <% if user.designation !=nil%>
+        <b><%= user.designation %></b>
+        <%else%>
+        <b>student</b>
+        <%end%>
       </div>
     </div>
-    </div>
+  </div>
+
+<% end %>
+
 <% end %>
 </div>
 

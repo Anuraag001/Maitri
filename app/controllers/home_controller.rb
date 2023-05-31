@@ -6,8 +6,10 @@ class HomeController < ApplicationController
     @comment=Comment.new
   end
 
-  def view
-
+  def chatstart
+@room=Room.find(params[:id])
+@user=User.find(params[:user])
+@messages=Messages.where(room:@room)
   end
 
   def videochat
@@ -15,7 +17,8 @@ class HomeController < ApplicationController
   end
 
   def forums
-
+@room=Room.new
+@user=User.find(current_user.id)
   end
 
   def confession
